@@ -53,7 +53,7 @@
 </svelte:head>
 
 <a
-	class="group/btn absolute left-4 flex flex-row gap-4"
+	class="group/btn relative xl:absolute right-4 left-4 flex-row gap-4 flex"
 	href="/blog"
 	use:animate={{ type: 'from', duration: 1, x: -200, ease: 'expo.inOut' }}
 >

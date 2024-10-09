@@ -96,7 +96,7 @@
 				href="https://www.linkedin.com/in/jasper-clarke/"
 				target="_blank"
 				rel="noreferrer"
-				class="text-xl linkanimation">LinkedIn</a
+				class="text-2xl linkanimation">LinkedIn</a
 			>
 		</span>
 		<span class="down"
@@ -104,32 +104,32 @@
 				href="https://github.com/jasper-clarke"
 				target="_blank"
 				rel="noreferrer"
-				class="text-xl linkanimation">GitHub</a
+				class="text-2xl linkanimation">GitHub</a
 			></span
 		>
 		<span class="down">
-			<a href="/blog" class="text-xl linkanimation">Blog</a>
+			<a href="/#" class="text-2xl linkanimation">New Blog Soon!</a>
 		</span>
 	</div>
 	<div
-		class="flex flex-col border-2 border-zinc-900 shadow-2xl shadow-white/15 rounded-lg p-4 font-sans md:min-w-[600px] md:mt-0 max-w-[700px] mr-4 ml-4 mt-64 askJasper"
+		class="flex flex-col border-2 border-zinc-900 shadow-2xl shadow-white/15 rounded-lg p-4 font-sans md:min-w-[700px] md:mt-0 max-w-[700px] mr-4 ml-4 mt-64 askJasper"
 		use:animate={{ type: 'from', duration: 1.2, y: -600, opacity: 0, ease: 'back.out' }}
 	>
 		<div class="flex flex-row items-center gap-2 mb-2">
 			<button
-				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm suggestion"
+				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-md suggestion"
 				on:click={() => askJasper('Who are you?')}
 			>
 				Who are you?
 			</button>
 			<button
-				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm suggestion"
+				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-md suggestion"
 				on:click={() => askJasper('What do you do?')}
 			>
 				What do you do?
 			</button>
 			<button
-				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm hidden md:block suggestion"
+				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-md hidden md:block suggestion"
 				on:click={() => askJasper('What is your advice to developers?')}
 			>
 				What is your advice to developers?
@@ -143,7 +143,7 @@
 				id="askJasperInput"
 				bind:value={message}
 				placeholder="Ask Jasper..."
-				class="p-2 text-white bg-black rounded-lg flex-1 focus:outline-none"
+				class="p-2 text-white bg-black rounded-lg flex-1 focus:outline-none text-md"
 			/>
 			<button
 				on:click={() => askJasper(message)}
@@ -161,9 +161,9 @@
 		>
 			<div class="ml-4 mt-4 flex flex-row gap-2 align-top">
 				<img src="/profile.jpg" alt="Jasper Clarke" class="w-8 h-8 rounded-full" />
-				<strong class="text-md">Jasper:</strong>
+				<strong class="text-lg">Jasper:</strong>
 			</div>
-			<p id="responseText" class="text-md ml-14 mb-4" style="max-width: 80%">{responseText}</p>
+			<p id="responseText" class="text-lg ml-14 mb-4" style="max-width: 80%">{responseText}</p>
 		</div>
 	</div>
 </main>
