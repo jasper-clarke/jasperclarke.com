@@ -3,22 +3,12 @@
 </script>
 
 <header
-	class="bg-gray-800 text-white p-4"
-	use:animate={{ type: 'from', duration: 1, y: -200, z: 0, ease: 'power2.out', opacity: 0.5 }}
+	class="text-white p-4 w-full"
+	use:animate={{ type: 'from', duration: 1, y: -200, z: 0, ease: 'expo.inOut' }}
 >
-	<div class="container mx-auto flex justify-between items-center">
+	<div class="flex justify-between items-center">
 		<a href="/" class="text-white">
-			<h1 class="text-2xl font-bold">SvelteKit Blog</h1>
+			<h1 class="text-4xl font-serif">Jasper Clarke</h1>
 		</a>
-		<nav>
-			<ul class="flex space-x-4">
-				<li>
-					<a href="/" class="text-white hover:underline">Home</a>
-				</li>
-				<li>
-					<a href="/about" class="text-white hover:underline">About</a>
-				</li>
-			</ul>
-		</nav>
 	</div>
 </header>

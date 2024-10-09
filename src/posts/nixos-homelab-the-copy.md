@@ -1,7 +1,8 @@
 ---
-title: 'The Ultimate NixOS HomeLab Guide: The Install'
-description: 'This is my first post!'
+title: 'The Copy'
+description: 'This is my copy post!'
 date: '2024-05-03'
+image: /nixos-homelab-install.jpg
 categories:
   - blog
   - tutorial
@@ -10,7 +11,10 @@ published: true
 
 Finally after 2 weeks here we are. A full, in-depth, step-by-step, ultimate guide to NixOS for homeservers!
 
-## Contents
+This first post wont be too long but will cover the following:
+
+1. [Installing NixOS](#installation)
+2. [Starting a Basic Config](#configuration)
 
 Well without further a due, lets get this series rolling!
 
