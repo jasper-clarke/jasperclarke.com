@@ -32,16 +32,13 @@
 
 {#key post.slug}
 	<a
-		class="w-full {(i === 0 || i === 1 || i === 2) && height !== 0
-			? 'lg:hidden'
-			: ''} flex flex-col rounded-2xl items-center justify-center {isHovered
-			? 'transition duration-300 ease-in-out'
-			: ''} relative overflow-hidden bg-gray-500/5"
-		style={height !== 0
-			? 'height: ' + height + 'px; margin-bottom: 24px;'
+		class="w-full {(i === 0 || i === 1 || i === 2) && height !== 0 ? 'lg:hidden' : ''} {height !== 0
+			? 'lg:h-[' + height + 'px] p-6 mb-6'
 			: i === 0
 				? ''
-				: 'flex: 1;'}
+				: 'flex-1'} flex flex-col rounded-2xl items-center justify-center md:overflow-hidden {isHovered
+			? 'transition duration-300 ease-in-out'
+			: ''} relative bg-gray-500/5"
 		href={`/blog/${post.slug}`}
 		on:mouseenter={() => (isHovered = true)}
 		on:mouseleave={() => (isHovered = false)}

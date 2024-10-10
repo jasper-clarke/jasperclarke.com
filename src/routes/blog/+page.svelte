@@ -10,16 +10,18 @@
 
 <Header />
 <main class="flex flex-1 mt-24 flex-row mx-6" style="height: calc(100vh - 150px);">
-	<section class="hidden lg:flex flex-1 flex-wrap gap-6 mr-6">
+	<section class="hidden lg:flex flex-1 flex-wrap gap-6">
 		{#each firstPosts as post, i}
 			<BlogCard {post} {i} />
 		{/each}
 	</section>
-	{#if posts.length > 3}
-		<section class="max-h-screen flex-1 lg:flex-[0.3] overflow-y-scroll overflow-x-hidden">
-			{#each posts as post, i}
-				<BlogCard {post} {i} height={300} />
-			{/each}
-		</section>
-	{/if}
+	<section
+		class="max-h-screen {posts.length <= 3
+			? 'lg:hidden'
+			: ''} flex-1 flex flex-col lg:block lg:flex-[0.3] overflow-y-scroll overflow-x-hidden ml-6"
+	>
+		{#each posts as post, i}
+			<BlogCard {post} {i} height={300} />
+		{/each}
+	</section>
 </main>
