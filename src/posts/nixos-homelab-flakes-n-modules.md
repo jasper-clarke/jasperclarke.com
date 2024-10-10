@@ -12,6 +12,8 @@ published: true
 
 Welcome back everyone to the NixOS homelab guide, today we will be moving all our configurations into a very simple flake, setting up Vaultwarden with Fail2Ban and finally modularizing our configuration ready for future self hosted apps.
 
+## Contents
+
 ## Flake Setup
 
 Moving our configuration to a flake is pretty easy so let's get straight to it.

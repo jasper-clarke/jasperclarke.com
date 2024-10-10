@@ -96,7 +96,7 @@
 	<hgroup class="flex flex-col">
 		<h1>{data.meta.title}</h1>
 		<p class="text-sm">
-			Published at {formatDate(data.meta.date)}
+			Published on {formatDate(data.meta.date)}
 		</p>
 	</hgroup>
 

@@ -18,7 +18,7 @@ And the only reason I somewhat survived this is because of the amazing help of a
 
 Alright so back to the actual reason for this post, installing Arch Linux.
 
-**Updated as of: July 2024**
+## Contents
 
 ## Creating the Live ISO
 
