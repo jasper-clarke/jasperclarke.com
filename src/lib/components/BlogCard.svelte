@@ -1,10 +1,11 @@
 <script>
-	import { animate } from '../../animate.js';
+	import { animate } from '$lib/animate.js';
 	import { formatDate } from '$lib/utils';
 	import { title, description, url } from '$lib/config';
 	export let post;
 	export let i;
-	let cardHover = false;
+	export let height = 0;
+	let isHovered = false;
 </script>
 
 <svelte:head>
@@ -31,44 +32,38 @@
 
 {#key post.slug}
 	<a
-		class="{cardHover
-			? 'card'
-			: ''} overflow-hidden w-full max-w-4xl flex flex-row mt-4 mx-4 bg-zinc-900/75 rounded-2xl"
-		on:mouseenter={() => (cardHover = true)}
+		class="w-full {(i === 0 || i === 1 || i === 2) && height !== 0
+			? 'lg:hidden'
+			: ''} flex flex-col rounded-2xl items-center justify-center {isHovered
+			? 'transition duration-300 ease-in-out'
+			: ''} relative overflow-hidden bg-gray-500/5"
+		style={height !== 0
+			? 'height: ' + height + 'px; margin-bottom: 24px;'
+			: i === 0
+				? ''
+				: 'flex: 1;'}
 		href={`/blog/${post.slug}`}
+		on:mouseenter={() => (isHovered = true)}
+		on:mouseleave={() => (isHovered = false)}
 		use:animate={{
 			type: 'from',
-			duration: 1.4,
-			x: i % 2 == 0 ? 500 : -500,
-			opacity: 0.3,
+			duration: 1,
+			scale: 0.9,
+			opacity: 0.5,
 			ease: 'expo.inOut'
 		}}
 	>
-		<article class="flex flex-col flex-1">
-			<div class="p-4 space-y-4">
-				<h3 class="text-2xl font-bold" data-toc-ignore>{post.title}</h3>
-				<article>
-					<p>
-						{post.description}
-					</p>
-				</article>
-			</div>
-			<hr class="opacity-50" />
-			<footer class="p-4 flex justify-start items-center space-x-4">
-				<div class="flex-auto flex justify-between items-center">
-					<h6 class="font-bold" data-toc-ignore>By Jasper Clarke</h6>
-					<small>On {formatDate(post.date)}</small>
-				</div>
-			</footer>
-		</article>
+		<div
+			class="absolute top-0 left-0 w-full h-full transition duration-500 ease-in-out rounded-2xl"
+			style="background-image: url({post.image}); background-size: cover; opacity: 0.1; background-position: center; z-index: 0; {isHovered &&
+				'transform: scale(1.08); opacity: 0.3;'}"
+		></div>
+		<h3 class="text-3xl font-bold relative z-10 text-center max-w-[80%]" data-toc-ignore>
+			{post.title}
+		</h3>
+		<p class="relative z-10 text-lg text-center max-w-[60%]">
+			{post.description}
+		</p>
+		<small>On {formatDate(post.date)}</small>
 	</a>
 {/key}
-
-<style>
-	.card {
-		transition: transform 0.3s ease-in-out;
-	}
-	.card:hover {
-		transform: scale(1.02) rotate3d(1, 1, 1, 5deg) translate3d(0, -5px, 0) !important;
-	}
-</style>

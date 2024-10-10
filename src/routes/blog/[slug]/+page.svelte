@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { gsap } from 'gsap';
-	import { animate } from '../../../animate';
+	import { animate } from '$lib/animate.js';
 	import { isMobile, formatDate } from '$lib/utils';
 	import { url, title } from '$lib/config';
 	import { onMount } from 'svelte';
@@ -18,7 +18,7 @@
 				return;
 			}
 			gsap.from(el, {
-				duration: 1,
+				duration: 0.4,
 				y: -100,
 				opacity: 0,
 				ease: 'power4.out',
@@ -53,7 +53,7 @@
 </svelte:head>
 
 <a
-	class="group/btn relative xl:absolute right-4 left-4 flex-row gap-4 flex w-fit"
+	class="group/btn fixed top-16 right-4 left-4 flex-row gap-4 flex w-fit"
 	href="/blog"
 	use:animate={{ type: 'from', duration: 1, x: -200, ease: 'expo.inOut' }}
 >
@@ -90,7 +90,7 @@
 	</div>
 </a>
 <article
-	class="prose prose-invert md:prose-lg lg:prose-2xl prose-h1:mb-2 prose-h2:mt-10 mb-16 mx-4 md:mx-auto mt-8"
+	class="prose prose-invert md:prose-lg lg:prose-2xl prose-h1:mb-2 prose-h2:mt-10 mb-16 mx-4 md:mx-auto mt-32 xl:mt-24"
 >
 	<!-- Title -->
 	<hgroup class="flex flex-col">
@@ -104,7 +104,7 @@
 	<div class="flex flex-wrap gap-4 mb-6">
 		{#each data.meta.categories as category}
 			<a
-				href={`/blog/categories/${category}`}
+				href={`#${category}`}
 				class="chip variant-filled-secondary no-underline hover:scale-105 transition"
 				>&num;{category}</a
 			>

@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
-	import { animate } from '../animate.js';
+	import { animate } from '$lib/animate.js';
 
 	let message = '';
 	let responseText = 'Thinking...';
@@ -108,7 +108,9 @@
 			></span
 		>
 		<span class="down">
-			<a href="/#" class="text-2xl linkanimation">New Blog Soon!</a>
+			<a href="/blog" class="text-2xl linkanimation"
+				>Blog<span class="text-sm absolute top-0 -right-8">New!</span></a
+			>
 		</span>
 	</div>
 	<div
