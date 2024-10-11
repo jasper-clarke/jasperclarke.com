@@ -57,4 +57,4 @@ When deciding which language or framework to learn next, balance personal enjoym
 
 No matter what you choose, whether it's diving deeper into a familiar stack or venturing into new territory with a brand new language, the key takeaway is this: _Experiment, learn, and apply._ Every language you learn contributes to your growth as a developer, and in the end, it’s not about the language itself but how well you can use it to solve problems and in turn make the world a better place.
 
-This has been Jasper, until next time :wave:
+This has been Jasper, until next time 👋
