@@ -84,11 +84,11 @@
 		<section
 			class="max-h-screen {posts.length <= 3
 				? 'lg:hidden'
-				: ''} flex-1 flex flex-col lg:block lg:flex-[0.3] overflow-y-scroll overflow-x-hidden ml-6"
+				: ''} flex-1 flex flex-col lg:block lg:flex-[0.3] overflow-y-scroll overflow-x-hidden lg:ml-6"
 			style="scrollbar-width: none;"
 		>
 			{#each posts as post, i}
-				<BlogCard {post} {i} height={300} />
+				<BlogCard {post} {i} height={200} />
 			{/each}
 		</section>
 	{/if}
