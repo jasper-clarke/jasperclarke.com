@@ -4,6 +4,7 @@
 	import { title, description, url } from '$lib/config';
 	export let post;
 	export let i;
+	export let classes = '';
 	export let height = 0;
 	let isHovered = false;
 </script>
@@ -38,7 +39,7 @@
 				? ''
 				: 'flex-1'} flex flex-col rounded-2xl items-center justify-center md:overflow-hidden {isHovered
 			? 'transition duration-300 ease-in-out'
-			: ''} relative bg-gray-500/5"
+			: ''} {classes} relative bg-gray-500/5"
 		href={`/blog/${post.slug}`}
 		on:mouseenter={() => (isHovered = true)}
 		on:mouseleave={() => (isHovered = false)}
@@ -52,8 +53,9 @@
 	>
 		<div
 			class="absolute top-0 left-0 w-full h-full transition duration-500 ease-in-out rounded-2xl"
-			style="background-image: url({post.image}); background-size: cover; opacity: 0.1; background-position: center; z-index: 0; {isHovered &&
-				'transform: scale(1.08); opacity: 0.3;'}"
+			style="background-image: url({post.image}); background-size: cover; opacity: 0.1; background-position: center; z-index: 0; {isHovered
+				? 'transform: scale(1.08); opacity: 0.4;'
+				: ''}"
 		></div>
 		<h3 class="text-3xl font-bold relative z-10 text-center max-w-[80%]" data-toc-ignore>
 			{post.title}

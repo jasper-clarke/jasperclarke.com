@@ -104,7 +104,7 @@
 	<div class="flex flex-wrap gap-4 mb-6">
 		{#each data.meta.categories as category}
 			<a
-				href={`#${category}`}
+				href={`/blog?category=${category}`}
 				class="chip variant-filled-secondary no-underline hover:scale-105 transition"
 				>&num;{category}</a
 			>

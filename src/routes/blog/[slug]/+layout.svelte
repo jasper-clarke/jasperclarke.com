@@ -2,5 +2,5 @@
 	import Header from '$lib/components/Header.svelte';
 </script>
 
-<Header />
+<Header position="fixed" />
 <slot />

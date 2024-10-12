@@ -25,8 +25,16 @@ async function getPosts() {
   return posts;
 }
 
+async function getAllCategories() {
+  const posts = await getPosts();
+  const categories = new Set(posts.map((post) => post.category));
+  return Array.from(categories);
+}
+
 export async function GET() {
   const posts = await getPosts();
+  // const categories = await getAllCategories();
+  // return json({ posts, categories });
   return json(posts);
 }
 
