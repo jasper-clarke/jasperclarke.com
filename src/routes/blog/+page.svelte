@@ -1,6 +1,7 @@
 <script>
 	import BlogCard from '$lib/components/BlogCard.svelte';
 	import Header from '$lib/components/Header.svelte';
+	import { url, title } from '$lib/config';
 	export let data;
 	// List of all categories
 	const categories = data.posts

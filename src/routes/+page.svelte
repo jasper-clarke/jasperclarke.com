@@ -86,6 +86,29 @@
 	});
 </script>
 
+<!-- SEO -->
+<svelte:head>
+	<title>Jasper Clarke | Web Architect &amp; Engineer</title>
+
+	<link rel="canonical" href="https://jasperclarke.com" />
+
+	<meta
+		name="description"
+		content="Portfolio of Jasper Clarke, a Web Architect &amp; Engineer with a passion for building performant and scalable web applications."
+	/>
+
+	<meta property="og:url" content="https://jasperclarke.com" />
+	<meta property="og:title" content="Jasper Clarke | Web Architect &amp; Engineer" />
+	<meta
+		property="og:description"
+		content="Portfolio of Jasper Clarke, a Web Architect &amp; Engineer with a passion for building performant and scalable web applications."
+	/>
+	<meta property="og:site_name" content="Jasper Clarke" />
+
+	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+	<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+</svelte:head>
+
 <main
 	class="min-h-screen bg-black text-white flex items-center md:justify-center font-serif flex-col"
 >
