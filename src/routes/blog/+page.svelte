@@ -1,5 +1,6 @@
 <script>
 	import BlogCard from '$lib/components/BlogCard.svelte';
+	import BuyMeACoffee from '$lib/components/BuyMeACoffee.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import { url, title } from '$lib/config';
 	export let data;
@@ -33,6 +34,7 @@
 </script>
 
 <Header position="static" />
+<BuyMeACoffee classes="fixed top-4 right-4" />
 <div class="flex flex-col mx-6 lg:flex-row lg:mx-0 justify-center self-center mt-2">
 	{#if search !== ''}
 		<button

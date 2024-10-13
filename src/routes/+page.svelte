@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { animate } from '$lib/animate.js';
+	import BuyMeACoffee from '$lib/components/BuyMeACoffee.svelte';
 
 	let message = '';
 	let responseText = 'Thinking...';
@@ -109,6 +110,7 @@
 	<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
 </svelte:head>
 
+<BuyMeACoffee classes="absolute top-4 right-4" />
 <main
 	class="min-h-screen bg-black text-white flex items-center md:justify-center font-serif flex-col"
 >
@@ -137,24 +139,24 @@
 		</span>
 	</div>
 	<div
-		class="flex flex-col border-2 border-zinc-900 shadow-2xl shadow-white/15 rounded-lg p-4 font-sans md:min-w-[700px] md:mt-0 max-w-[700px] mr-4 ml-4 mt-64 askJasper"
+		class="flex flex-col border-2 border-zinc-900 shadow-2xl shadow-white/15 rounded-lg p-4 font-sans min-w-[200px] md:min-w-[700px] md:mt-0 max-w-[700px] mr-4 ml-4 mt-64 askJasper"
 		use:animate={{ type: 'from', duration: 1.2, y: -600, opacity: 0, ease: 'back.out' }}
 	>
 		<div class="flex flex-row items-center gap-2 mb-2">
 			<button
-				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-md suggestion"
+				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md suggestion"
 				on:click={() => askJasper('Who are you?')}
 			>
 				Who are you?
 			</button>
 			<button
-				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-md suggestion"
+				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md suggestion"
 				on:click={() => askJasper('What do you do?')}
 			>
 				What do you do?
 			</button>
 			<button
-				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-md hidden md:block suggestion"
+				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md hidden md:block suggestion"
 				on:click={() => askJasper('What is your advice to developers?')}
 			>
 				What is your advice to developers?
@@ -172,10 +174,10 @@
 			/>
 			<button
 				on:click={() => askJasper(message)}
-				class="border-l-2 border-zinc-900 p-2 askJasperButton"
+				class="border-l-2 border-zinc-900 p-2 min-w-[50px] askJasperButton"
 				style="display: {showButton ? 'block' : 'none'}"
 			>
-				<img src="/return-down-back-outline.svg" alt="Send" class="w-8 h-8" />
+				<img src="/return-down-back-outline.svg" alt="Send" class="w-[32px] h-[32px]" />
 			</button>
 			<div class="loader w-2 mr-6" style="display: {showLoader ? 'block' : 'none'}"></div>
 		</div>
