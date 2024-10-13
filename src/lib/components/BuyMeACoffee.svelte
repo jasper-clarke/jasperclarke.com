@@ -39,7 +39,7 @@
 			</button>
 
 			<!-- Modal Title -->
-			<h2 class="text-3xl mb-2">Buy Jasper A Coffee</h2>
+			<h2 class="text-3xl mb-2">Buy Jasper a Coffee</h2>
 			<hr class="mb-4 rounded-xl" />
 
 			<div class="flex flex-row items-center gap-2 sm:gap-4">
@@ -71,7 +71,7 @@
 				<!-- <div class="rounded-xl bg-zinc-900 p-2"> -->
 				<div>
 					<p class="text-2xl">
-						Total: $6<small>AUD</small>/coffee<br />
+						$6<small>AUD</small>/coffee<br />
 					</p>
 					<small class="text-sm">Choose quantity at checkout</small>
 				</div>
