@@ -51,14 +51,14 @@
 					on:click={() => (option = 'once')}>Once</button
 				>
 				<button
-					class="rounded-xl bg-zinc-900 border text-xl font-sans p-1 sm:p-2 border-zinc-800 transition ease-in-out duration-200 hover:scale-105 {option ===
+					class="rounded-xl border text-xl font-sans p-1 sm:p-2 border-zinc-800 transition ease-in-out duration-200 hover:scale-105 {option ===
 					'weekly'
 						? 'bg-zinc-100 text-black'
 						: 'bg-zinc-900'}"
 					on:click={() => (option = 'weekly')}>Weekly</button
 				>
 				<button
-					class="rounded-xl bg-zinc-900 border text-xl font-sans p-1 sm:p-2 border-zinc-800 transition ease-in-out duration-200 hover:scale-105 {option ===
+					class="rounded-xl border text-xl font-sans p-1 sm:p-2 border-zinc-800 transition ease-in-out duration-200 hover:scale-105 {option ===
 					'monthly'
 						? 'bg-zinc-100 text-black'
 						: 'bg-zinc-900'}"
