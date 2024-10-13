@@ -6,11 +6,11 @@
 
 	const continueToCheckout = () => {
 		if (option === 'once') {
-			window.location.replace('https://donate.stripe.com/5kA17ccsXb7L1u8fZ0');
+			window.open('https://donate.stripe.com/5kA17ccsXb7L1u8fZ0');
 		} else if (option === 'weekly') {
-			window.location.replace('https://buy.stripe.com/dR65nsboT0t75Ko6op');
+			window.open('https://buy.stripe.com/dR65nsboT0t75Ko6op');
 		} else {
-			window.location.replace('https://buy.stripe.com/bIY4jo3Wr7Vz4Gk5kk');
+			window.open('https://buy.stripe.com/bIY4jo3Wr7Vz4Gk5kk');
 		}
 	};
 </script>
