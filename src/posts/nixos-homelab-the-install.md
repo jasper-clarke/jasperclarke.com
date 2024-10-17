@@ -203,6 +203,4 @@ For Wifi users you are not done quite yet, follow these steps to login to your n
 
 Congratulations! You have just setup NixOS for your homeserver, in the next post I'll be setting up Nextcloud and organizing our configuration to use modules so stay tuned for the next installment coming next week (hopefully)!
 
-And if you have any suggestions for popular self hosted software you want to see setup on NixOS leave a comment and it might just make it into the series.
-
 Thanks everyone and I'll see you all again soon!

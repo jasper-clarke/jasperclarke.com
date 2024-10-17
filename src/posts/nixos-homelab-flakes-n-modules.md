@@ -369,6 +369,6 @@ reboot
 
 Now on your personal computer, open a new terminal and try to connect to the server via SSH. If you connect with the password being requested then hurray, you have just secured your server!
 
-If you have any troubles please leave a comment or contact me on Discord (`jasper-at-windswept`) and I will try to help out!
+If you have any troubles please leave a comment or contact me on Discord (`jasper_clarke`) and I will try to help out!
 
-That is all for this post, make sure to follow and like the post if you found it helpful and I will see you all in the next one.
+This has been Jasper, until next time 👋
