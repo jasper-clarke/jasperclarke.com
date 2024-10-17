@@ -6,26 +6,26 @@
 	import { onMount } from 'svelte';
 	export let data;
 
-	onMount(() => {
-		// For each child element of the article animate it with gsap staggered
-		const article = document.querySelector('article');
-		if (isMobile()) {
-			return;
-		}
-		// @ts-ignore
-		article.querySelectorAll('*').forEach((el, i) => {
-			if (el.classList.contains('chip')) {
-				return;
-			}
-			gsap.from(el, {
-				duration: 0.4,
-				y: -100,
-				opacity: 0,
-				ease: 'power4.out',
-				delay: i * 0.05
-			});
-		});
-	});
+	// onMount(() => {
+	// 	// For each child element of the article animate it with gsap staggered
+	// 	const article = document.querySelector('article');
+	// 	if (isMobile()) {
+	// 		return;
+	// 	}
+	// 	// @ts-ignore
+	// 	article.querySelectorAll('*').forEach((el, i) => {
+	// 		if (el.classList.contains('chip')) {
+	// 			return;
+	// 		}
+	// 		gsap.from(el, {
+	// 			duration: 0.4,
+	// 			y: -100,
+	// 			opacity: 0,
+	// 			ease: 'power4.out',
+	// 			delay: i * 0.05
+	// 		});
+	// 	});
+	// });
 </script>
 
 <!-- SEO -->
@@ -91,6 +91,7 @@
 </a>
 <article
 	class="prose prose-invert md:prose-lg lg:prose-2xl prose-h1:mb-2 prose-h2:mt-10 mb-16 mx-4 md:mx-auto mt-32 xl:mt-24"
+	use:animate={{ type: 'from', duration: 1, y: -200, opacity: 0, ease: 'expo.inOut' }}
 >
 	<!-- Title -->
 	<hgroup class="flex flex-col">
