@@ -95,7 +95,7 @@
 
 	<meta
 		name="description"
-		content="Portfolio of Jasper Clarke, a Web Architect &amp; Engineer with a passion for building performant and scalable web applications."
+		content="Jasper Clarke, a Web Architect &amp; Engineer with a passion for building performant and scalable web applications."
 	/>
 
 	<meta property="og:url" content="https://jasperclarke.com" />
