@@ -77,13 +77,13 @@
 			stagger: 0.15,
 			ease: 'power2.out'
 		});
-		gsap.from('.suggestion', {
-			duration: 1,
-			x: -200,
-			opacity: 0,
-			stagger: 0.15,
-			ease: 'power2.out'
-		});
+		// gsap.from('.suggestion', {
+		// 	duration: 1,
+		// 	x: -200,
+		// 	opacity: 0,
+		// 	stagger: 0.15,
+		// 	ease: 'power2.out'
+		// });
 	});
 </script>
 
@@ -144,19 +144,19 @@
 	>
 		<div class="flex flex-row items-center gap-2 mb-2">
 			<button
-				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md suggestion"
+				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md suggestion hover:scale-105 transition ease-in-out duration-300"
 				on:click={() => askJasper('Who are you?')}
 			>
 				Who are you?
 			</button>
 			<button
-				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md suggestion"
+				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md suggestion hover:scale-105 transition ease-in-out duration-300"
 				on:click={() => askJasper('What do you do?')}
 			>
 				What do you do?
 			</button>
 			<button
-				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md hidden md:block suggestion"
+				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md hidden md:block suggestion hover:scale-105 transition ease-in-out duration-300"
 				on:click={() => askJasper('What is your advice to developers?')}
 			>
 				What is your advice to developers?
@@ -192,6 +192,13 @@
 			</div>
 			<p id="responseText" class="text-lg ml-14 mb-4" style="max-width: 80%">{responseText}</p>
 		</div>
+		<a href="/about" class="text-sm absolute -bottom-14 self-center linkanimation text-zinc-200"
+			>who <em>really</em> has time for small talk anyway...</a
+		><small
+			class="text-xs absolute -bottom-[3.7rem] self-center text-zinc-500 hover:text-zinc-200 transition ease-in-out duration-300 hover:scale-105"
+		>
+			I mean it's not like Jasper spent a <em>whole week</em> on that, right?
+		</small>
 	</div>
 </main>
 
@@ -199,7 +206,6 @@
 	.linkanimation {
 		text-decoration: none;
 		text-decoration-color: none;
-		color: white;
 		position: relative;
 	}
 	.linkanimation::before {
@@ -207,7 +213,7 @@
 		content: '';
 		width: 100%;
 		height: 1px;
-		background-color: #fefefe;
+		background-color: #d4d4d8;
 		transform: scale(1, 1);
 		transition: background-color 0.5s ease-in-out;
 		bottom: 0px;

@@ -40,6 +40,7 @@
 		"remark-toc": "^9.0.0",
 		"remark-unwrap-images": "^4.0.0",
 		"shiki": "^1.22.0",
+		"sitemap": "^8.0.0",
 		"stripe": "^17.2.0"
 	}
 }
