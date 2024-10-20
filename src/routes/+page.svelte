@@ -195,7 +195,7 @@
 		<a href="/about" class="text-sm absolute -bottom-14 self-center linkanimation text-zinc-200"
 			>who <em>really</em> has time for small talk anyway...</a
 		><small
-			class="text-xs absolute -bottom-[3.7rem] self-center text-zinc-500 hover:text-zinc-200 transition ease-in-out duration-300 hover:scale-105"
+			class="text-xs absolute -bottom-20 text-center md:-bottom-[3.7rem] self-center text-zinc-500 hover:text-zinc-200 transition ease-in-out duration-300 hover:scale-105"
 		>
 			I mean it's not like Jasper spent a <em>whole week</em> on that, right?
 		</small>
