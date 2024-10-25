@@ -1,13 +1,15 @@
 # About Me
 
-Hey! I'm **Jasper Clarke**. I've been building websites for the past four years - learned everything myself! I really enjoy creating web solutions that are both powerful and easy to use.
+Hey! I'm **Jasper Clarke**. I'm a developer, programmer, architect, engineer, anything goes really.
+I've been developing websites and other projects for the past four plus years just in my spare time. I really enjoy creating web solutions that are both powerful and easy to use.
 
-Right now, I'm working at [Cloud Concepts](https://cloudconcepts.com.au) where I get to work with awesome technologies like JavaScript, AWS, and PHP. But I'm always eager to learn new things too, so I'm currently exploring [Gleam](https://gleam.run) and [Golang](https://go.dev)!
+Currently, I'm working at [Cloud Concepts](https://cloudconcepts.com.au) where I get to create intuitive web experiences with the power of PHP and Javascript. But I'm always eager to learn new things too, so I'm currently exploring [Gleam](https://gleam.run) and [Golang](https://go.dev)!
 
-My approach to development is all about solving problems and making sure users have a great experience. Linux has been my trusty companion on this journey, helping me become more adaptable and a better problem solver. I also greatly value clean and maintainable code, I'm always looking for ways to improve things through refactoring, rewriting and occasionally, "well I guess it is time to rewrite it in Rust".
+When it comes to a new project or job my approach is always to solve problems, architect solutions and make sure users have a great experience. Something that has helped me greatly in learning a vast array of languages and techniques is my usage of Linux as my operating system for the last few years, the phrase "what doesn't [cause your computer to self detonate] makes you stronger" is pretty much the story of my pre-working life. Through all the struggle caused by Linux sometimes I have come out a better problem solver and have become more adaptable overall.
 
-Outside of work, you'll find me playing bass guitar or tending to my bonsai trees. Those hobbies have taught me a lot about patience and precision - qualities that definitely come in handy at work! I'm not actively looking for new opportunities right now, but I love connecting with other people in the field, sharing knowledge, and learning from them.
+One mindset that really drives me is the idea of "clean and maintainable code". Even if I have half a prototype I'm likely already thinking of how to refactor it, rewrite it or just give up and admit that Rust is the only solution.
 
-Communication and teamwork are just as important as technical skills to me. Delivering great results is all about collaboration! And of course, finding that balance between work and life is key – I make sure to prioritize both so I can stay refreshed and focused.
+When I'm not busy trying to make the next big thing (or next startup idea that dies within a week), I'm pursuing my other passions. I love playing bass guitar and tending to my bonsai. I find bonsai to be somewhat stressful but once I make it through I come out with a beautiful and refined tree that reflects my appreciation for nature and modernity. Something else I find really important is communication and teamwork. How can you deliver what your client wants when you can't properly communicate with them? How can you work together with other people to achieve a common goal? I make sure that whilst I am working on my technical skills I keep up with my people skills too!
 
-Thanks for stopping by, why not check out my [blog](/blog) or [LinkedIn](https://www.linkedin.com/in/jasper-clarke/) if you want to know more about me?
+Whilst I am quite happy in my current role, I love connecting with other people in the field, sharing knowledge, and learning from them.
+If you would like to connect with me please feel free to reach out to me on my socials below, I'm always happy to chat about anything and everything, (just nothing controversial, this isn't twitter alright 🤣).

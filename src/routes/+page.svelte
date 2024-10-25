@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { animate } from '$lib/animate.js';
+	import { ReturnDownBackOutline } from 'svelte-ionicons';
 	import BuyMeACoffee from '$lib/components/BuyMeACoffee.svelte';
 
 	let message = '';
@@ -25,6 +26,12 @@
 		showButton = false;
 		showResponseContainer = true;
 		responseText = 'Thinking...';
+		if (message === '') {
+			responseText = 'Please enter a message';
+			showLoader = false;
+			showButton = true;
+			return;
+		}
 		try {
 			const response = await fetch('/api/askJasper', {
 				method: 'POST',
@@ -177,7 +184,7 @@
 				class="border-l-2 border-zinc-900 p-2 min-w-[50px] askJasperButton"
 				style="display: {showButton ? 'block' : 'none'}"
 			>
-				<img src="/return-down-back-outline.svg" alt="Send" class="w-[32px] h-[32px]" />
+				<ReturnDownBackOutline size="32" />
 			</button>
 			<div class="loader w-2 mr-6" style="display: {showLoader ? 'block' : 'none'}"></div>
 		</div>

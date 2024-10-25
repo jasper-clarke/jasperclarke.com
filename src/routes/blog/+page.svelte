@@ -33,6 +33,20 @@
 	}
 </script>
 
+<!-- SEO -->
+<svelte:head>
+	<title>Blog - Jasper Clarke</title>
+
+	<link rel="canonical" href="https://jasperclarke.com/blog" />
+
+	<meta
+		name="description"
+		content="The place you go to find out what Jasper Clarke is up to, and his thoughts on the world. And possible an Arch Linux install guide or two."
+	/>
+
+	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+	<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+</svelte:head>
 <Header position="static" />
 <BuyMeACoffee classes="fixed top-4 right-4" />
 <div class="flex flex-col mx-6 lg:flex-row lg:mx-0 justify-center self-center mt-2">
