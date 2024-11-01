@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.line.highlighted {
+	background-color: #1e2430;
+	width: calc(100% + 70px);
+	display: inline-block;
+	margin: 0 -36px;
+	padding: 0 36px;
+}

@@ -5,6 +5,7 @@ import { bundledLanguages, getSingletonHighlighter } from 'shiki';
 import remarkUnwrapImages from 'remark-unwrap-images';
 import remarkToc from 'remark-toc';
 import rehypeSlug from 'rehype-slug';
+import { transformerNotationHighlight } from '@shikijs/transformers';
 
 const theme = 'github-dark-high-contrast';
 
@@ -18,7 +19,13 @@ const mdsvexOptions = {
         // this loads ALL languages. Will get better preformance by only calling what you need. Example: ["css", "javascript"]
         langs: Object.keys(bundledLanguages)
       });
-      const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme }));
+      const html = escapeSvelte(
+        highlighter.codeToHtml(code, {
+          lang,
+          theme,
+          transformers: [transformerNotationHighlight()]
+        })
+      );
       return `{@html \`${html}\` }`;
     }
   },

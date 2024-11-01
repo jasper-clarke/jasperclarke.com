@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { animate } from '$lib/animate.js';
-	import { ReturnDownBackOutline } from 'svelte-ionicons';
+	import { ReturnDownBackOutline, ArrowForward } from 'svelte-ionicons';
 	import BuyMeACoffee from '$lib/components/BuyMeACoffee.svelte';
 
 	let message = '';
@@ -199,8 +199,10 @@
 			</div>
 			<p id="responseText" class="text-lg ml-14 mb-4" style="max-width: 80%">{responseText}</p>
 		</div>
-		<a href="/about" class="text-sm absolute -bottom-14 self-center linkanimation text-zinc-200"
-			>who <em>really</em> has time for small talk anyway...</a
+		<a
+			href="/about"
+			class="text-sm absolute -bottom-14 self-center linkanimation text-zinc-200 flex flex-row gap-1"
+			>can we get a TLDR please <ArrowForward class="-mt-[1px]" /></a
 		><small
 			class="text-xs absolute -bottom-20 text-center md:-bottom-[3.7rem] self-center text-zinc-500 hover:text-zinc-200 transition ease-in-out duration-300 hover:scale-105"
 		>
