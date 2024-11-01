@@ -2,6 +2,7 @@
 title: 'The Definitive Guide to Installing Arch Linux'
 description: 'A definitive, beginner friendly guide to install Arch Linux. This guide will take you through the entire process from creating the live ISO to post install. Enjoy!'
 date: '2024-07-18'
+updated: '2024-11-1'
 image: /archlinux-install.jpg
 categories:
   - linux

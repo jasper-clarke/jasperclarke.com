@@ -48,6 +48,10 @@
 	<meta name="twitter:image:src" content={data.meta.image} />
 	<meta name="twitter:widgets:new-embed-design" content="on" />
 
+	<meta property="article:published_time" content={data.meta.updated} />
+	<meta property="article:modified_time" content={data.meta.updated} />
+	<meta name="date" content={data.meta.updated} />
+
 	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
 	<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
 </svelte:head>

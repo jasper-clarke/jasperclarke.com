@@ -2,6 +2,7 @@
 title: 'The Ultimate NixOS HomeLab Guide: The Install'
 description: 'In this post we will be going through the installation of NixOS on your homeserver. This is the first post in the series and will be followed by setting up Flakes, Modules and other self-hosted software.'
 date: '2024-05-03'
+updated: '2024-11-1'
 image: /nixos-homelab-install.jpg
 categories:
   - linux

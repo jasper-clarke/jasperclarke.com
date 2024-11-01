@@ -2,6 +2,7 @@
 title: 'The Ultimate NixOS Homelab Guide - Flakes, Modules and Fail2Ban w/ Cloudflare'
 description: 'In this post we will be moving all our configurations into a very simple flake, setting up Vaultwarden with Fail2Ban and finally modularizing our configuration ready for future self hosted apps.'
 date: '2024-07-02'
+updated: '2024-11-1'
 image: /nixos-homelab-flakes-n-modules.png
 categories:
   - linux

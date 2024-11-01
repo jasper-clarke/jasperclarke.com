@@ -2,6 +2,7 @@
 title: 'What Language Should I Choose?'
 description: 'The most common question you have probably asked yourself is now answered, see how to choose the right language for you!'
 date: '2024-10-11'
+updated: '2024-11-1'
 image: /what-to-learn.jpg
 categories:
   - advice
