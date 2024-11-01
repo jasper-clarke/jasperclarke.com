@@ -7,6 +7,7 @@
 	export let classes = '';
 	export let height = 0;
 	let isHovered = false;
+	let canHover = false;
 </script>
 
 <svelte:head>
@@ -37,7 +38,7 @@
 			? 'lg:h-[' + height + 'px] p-6 mb-6'
 			: i === 0
 				? ''
-				: 'flex-1'} flex flex-col rounded-2xl items-center justify-center {isHovered
+				: 'flex-1'} flex flex-col rounded-2xl items-center justify-center {isHovered && canHover
 			? 'transition duration-300 ease-in-out'
 			: ''} {classes} relative bg-gray-500/5"
 		style="contain: layout paint;"
@@ -49,12 +50,16 @@
 			duration: 1,
 			scale: 0.9,
 			opacity: 0.5,
-			ease: 'expo.inOut'
+			ease: 'expo.inOut',
+			onComplete: () => {
+				canHover = true;
+			}
 		}}
 	>
 		<div
 			class="absolute top-0 left-0 w-full h-full transition duration-500 ease-in-out rounded-2xl"
-			style="background-image: url({post.image}); background-size: cover; opacity: 0.1; background-position: center; z-index: 0; {isHovered
+			style="background-image: url({post.image}); background-size: cover; opacity: 0.1; background-position: center; z-index: 0; {isHovered &&
+			canHover
 				? 'transform: scale(1.08); opacity: 0.4;'
 				: ''}"
 		></div>
