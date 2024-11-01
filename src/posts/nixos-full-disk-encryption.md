@@ -176,6 +176,6 @@ boot = {
 Now just setup your configuration and run `nixos-install`
 
 And that is it! Full Disk Encryption and remote unlocking with a flash drive.
-Again if your looking for more info or run into and issue check the two links at the top of this guide.
+Again if your looking for more info or run into any issue check the two links at the top of this guide.
 
 This has been Jasper, until next time 👋
