@@ -3,7 +3,7 @@
 Hey! I'm **Jasper Clarke**. I'm a developer, programmer, architect, engineer, anything goes really.
 I've been developing websites and other projects for the past four plus years just in my spare time. I really enjoy creating web solutions that are both powerful and easy to use.
 
-Currently, I'm working at [Cloud Concepts](https://cloudconcepts.com.au) where I get to create intuitive web experiences with the power of PHP and Javascript. But I'm always eager to learn new things too, so I'm currently exploring [Gleam](https://gleam.run) and [Golang](https://go.dev)!
+Currently, I'm not working but just catching up with my personal life. I'm someone who is always eager to learn new things, so I'm currently exploring [Gleam](https://gleam.run) and [Golang](https://go.dev)!
 
 When it comes to a new project or job my approach is always to solve problems, architect solutions and make sure users have a great experience. Something that has helped me greatly in learning a vast array of languages and techniques is my usage of Linux as my operating system for the last few years, the phrase "what doesn't [cause your computer to self detonate] makes you stronger" is pretty much the story of my pre-working life. Through all the struggle caused by Linux sometimes I have come out a better problem solver and have become more adaptable overall.
 
