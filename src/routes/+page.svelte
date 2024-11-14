@@ -147,7 +147,7 @@
 	</div>
 	<div
 		class="flex flex-col border-2 border-zinc-900 shadow-2xl shadow-white/15 rounded-lg p-4 font-sans min-w-[200px] md:min-w-[700px] md:mt-0 max-w-[700px] mr-4 ml-4 mt-64 askJasper"
-		use:animate={{ type: 'from', duration: 1.2, y: -600, opacity: 0, ease: 'back.out' }}
+		use:animate={{ type: 'from', duration: 1.5, scale: 0.6, opacity: 0, ease: 'expo.inOut' }}
 	>
 		<div class="flex flex-row items-center gap-2 mb-2">
 			<button
