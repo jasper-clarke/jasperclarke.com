@@ -198,6 +198,7 @@
 				<strong class="text-lg">Jasper:</strong>
 			</div>
 			<p id="responseText" class="text-lg ml-14 mb-4" style="max-width: 80%">{responseText}</p>
+			<small class="self-center pt-2 pb-2 text-zinc-400">Generated with GPT-4o Mini</small>
 		</div>
 		<p class="text-md absolute -bottom-10 self-center text-zinc-200 flex flex-row gap-1">
 			<Construct class="mr-2" /> Under Construction. New site coming soon. <Construct
