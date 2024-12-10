@@ -5,11 +5,11 @@
 	import { ReturnDownBackOutline, Construct } from 'svelte-ionicons';
 	import BuyMeACoffee from '$lib/components/BuyMeACoffee.svelte';
 
-	let message = '';
-	let responseText = 'Thinking...';
-	let showLoader = false;
-	let showButton = true;
-	let showResponseContainer = false;
+	let message = $state('');
+	let responseText = $state('Thinking...');
+	let showLoader = $state(false);
+	let showButton = $state(true);
+	let showResponseContainer = $state(false);
 
 	// Function to handle the 'Enter' keypress event
 	// @ts-ignore
@@ -152,19 +152,19 @@
 		<div class="flex flex-row items-center gap-2 mb-2">
 			<button
 				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md suggestion hover:scale-105 transition ease-in-out duration-300"
-				on:click={() => askJasper('Who are you?')}
+				onclick={() => askJasper('Who are you?')}
 			>
 				Who are you?
 			</button>
 			<button
 				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md suggestion hover:scale-105 transition ease-in-out duration-300"
-				on:click={() => askJasper('What do you do?')}
+				onclick={() => askJasper('What do you do?')}
 			>
 				What do you do?
 			</button>
 			<button
 				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md hidden md:block suggestion hover:scale-105 transition ease-in-out duration-300"
-				on:click={() => askJasper('What is your advice to developers?')}
+				onclick={() => askJasper('What is your advice to developers?')}
 			>
 				What is your advice to developers?
 			</button>
@@ -180,7 +180,7 @@
 				class="p-2 text-white bg-black rounded-lg flex-1 focus:outline-none text-md"
 			/>
 			<button
-				on:click={() => askJasper(message)}
+				onclick={() => askJasper(message)}
 				class="border-l-2 border-zinc-900 p-2 min-w-[50px] askJasperButton"
 				style="display: {showButton ? 'block' : 'none'}"
 			>

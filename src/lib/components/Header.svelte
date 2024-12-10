@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
 	import { animate } from '$lib/animate.js';
 	import BuyMeACoffee from './BuyMeACoffee.svelte';
-	export let position;
+	let { position } = $props();
 </script>
 
 <header

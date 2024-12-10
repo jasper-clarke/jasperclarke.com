@@ -4,9 +4,9 @@
 	import { isMobile, formatDate } from '$lib/utils';
 	import { url, title } from '$lib/config';
 	import { onMount } from 'svelte';
-	export let data;
+	let { data } = $props();
 
-	// onMount(() => {
+	
 	// 	// For each child element of the article animate it with gsap staggered
 	// 	const article = document.querySelector('article');
 	// 	if (isMobile()) {
@@ -116,5 +116,5 @@
 		{/each}
 	</div>
 	<!-- Post -->
-	<svelte:component this={data.content} />
+	<data.content />
 </article>

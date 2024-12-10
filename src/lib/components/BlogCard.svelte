@@ -1,13 +1,22 @@
-<script>
+<script lang="ts">
 	import { animate } from '$lib/animate.js';
 	import { formatDate } from '$lib/utils';
 	import { title, description, url } from '$lib/config';
-	export let post;
-	export let i;
-	export let classes = '';
-	export let height = 0;
-	let isHovered = false;
-	let canHover = false;
+	interface Props {
+		post: any;
+		i: any;
+		classes?: string;
+		height?: number;
+	}
+
+	let {
+		post,
+		i,
+		classes = '',
+		height = 0
+	}: Props = $props();
+	let isHovered = $state(false);
+	let canHover = $state(false);
 </script>
 
 <svelte:head>
@@ -43,8 +52,8 @@
 			: ''} {classes} relative bg-gray-500/5"
 		style="contain: layout paint;"
 		href={`/blog/${post.slug}`}
-		on:mouseenter={() => (isHovered = true)}
-		on:mouseleave={() => (isHovered = false)}
+		onmouseenter={() => (isHovered = true)}
+		onmouseleave={() => (isHovered = false)}
 		use:animate={{
 			type: 'from',
 			duration: 1,

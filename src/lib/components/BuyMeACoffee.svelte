@@ -1,8 +1,12 @@
-<script>
+<script lang="ts">
 	import { animate } from '$lib/animate';
-	let modal = false;
-	let option = 'once';
-	export let classes = '';
+	let modal = $state(false);
+	let option = $state('once');
+	interface Props {
+		classes?: string;
+	}
+
+	let { classes = '' }: Props = $props();
 
 	const continueToCheckout = () => {
 		if (option === 'once') {
@@ -18,7 +22,7 @@
 <button
 	class="rounded-xl bg-zinc-900 sm:px-3 p-2 border border-zinc-800 text-md sm:text-xl font-serif {classes} z-30"
 	use:animate={{ type: 'from', duration: 1, y: -200, z: 0, ease: 'expo.inOut' }}
-	on:click={() => (modal = !modal)}>Coffee?</button
+	onclick={() => (modal = !modal)}>Coffee?</button
 >
 
 {#if modal}
@@ -33,7 +37,7 @@
 			<!-- Close button -->
 			<button
 				class="absolute top-4 right-6 text-gray-500 text-4xl"
-				on:click={() => (modal = false)}
+				onclick={() => (modal = false)}
 			>
 				&times;
 			</button>
@@ -48,21 +52,21 @@
 					'once'
 						? 'bg-zinc-100 text-black'
 						: 'bg-zinc-900'}"
-					on:click={() => (option = 'once')}>Once</button
+					onclick={() => (option = 'once')}>Once</button
 				>
 				<button
 					class="rounded-xl border text-xl font-sans p-1 sm:p-2 border-zinc-800 transition ease-in-out duration-200 hover:scale-105 {option ===
 					'weekly'
 						? 'bg-zinc-100 text-black'
 						: 'bg-zinc-900'}"
-					on:click={() => (option = 'weekly')}>Weekly</button
+					onclick={() => (option = 'weekly')}>Weekly</button
 				>
 				<button
 					class="rounded-xl border text-xl font-sans p-1 sm:p-2 border-zinc-800 transition ease-in-out duration-200 hover:scale-105 {option ===
 					'monthly'
 						? 'bg-zinc-100 text-black'
 						: 'bg-zinc-900'}"
-					on:click={() => (option = 'monthly')}>Monthly</button
+					onclick={() => (option = 'monthly')}>Monthly</button
 				>
 			</div>
 
@@ -78,7 +82,7 @@
 				<!-- </div> -->
 				<button
 					class="rounded-xl bg-zinc-900 p-2 border border-zinc-800 transition ease-in-out duration-200 hover:scale-105"
-					on:click={continueToCheckout}
+					onclick={continueToCheckout}
 				>
 					<p class="text-xl">Continue</p>
 				</button>
