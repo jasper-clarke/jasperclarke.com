@@ -2,75 +2,7 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { animate } from '$lib/animate.js';
-	import { ReturnDownBackOutline, Construct } from 'svelte-ionicons';
 	import BuyMeACoffee from '$lib/components/BuyMeACoffee.svelte';
-
-	let message = $state('');
-	let responseText = $state('Thinking...');
-	let showLoader = $state(false);
-	let showButton = $state(true);
-	let showResponseContainer = $state(false);
-
-	// Function to handle the 'Enter' keypress event
-	// @ts-ignore
-	function onKeyup(e) {
-		if (e.key === 'Enter') {
-			askJasper(message);
-		}
-	}
-
-	// Async function to call the API and update the UI accordingly
-	// @ts-ignore
-	async function askJasper(message) {
-		showLoader = true;
-		showButton = false;
-		showResponseContainer = true;
-		responseText = 'Thinking...';
-		if (message === '') {
-			responseText = 'Please enter a message';
-			showLoader = false;
-			showButton = true;
-			return;
-		}
-		try {
-			const response = await fetch('/api/askJasper', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({ message })
-			});
-
-			const result = await response.json();
-			if (!response.ok) {
-				throw new Error(`Error: ${response.status} ${response.statusText}`);
-			}
-
-			showLoader = false;
-			showButton = true;
-
-			let answerText = result.answer;
-			responseText = '';
-
-			let timeline = gsap.timeline();
-			// @ts-ignore
-			answerText.split(' ').forEach((word, index) => {
-				timeline.to(
-					{},
-					{
-						// Use an empty object for GSAP animation instead of DOM
-						duration: 0.2,
-						ease: 'back.inOut',
-						onComplete: () => {
-							responseText += ' ' + word;
-						}
-					}
-				);
-			});
-		} catch (error) {
-			console.error('Error:', error);
-		}
-	}
 
 	// Ensure the component is mounted before adding event listeners
 	onMount(() => {
@@ -149,61 +81,8 @@
 		class="flex flex-col border-2 border-zinc-900 shadow-2xl shadow-white/15 rounded-lg p-4 font-sans min-w-[200px] md:min-w-[700px] md:mt-0 max-w-[700px] mr-4 ml-4 mt-64 askJasper"
 		use:animate={{ type: 'from', duration: 1.5, scale: 0.6, opacity: 0, ease: 'expo.inOut' }}
 	>
-		<div class="flex flex-row items-center gap-2 mb-2">
-			<button
-				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md suggestion hover:scale-105 transition ease-in-out duration-300"
-				onclick={() => askJasper('Who are you?')}
-			>
-				Who are you?
-			</button>
-			<button
-				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md suggestion hover:scale-105 transition ease-in-out duration-300"
-				onclick={() => askJasper('What do you do?')}
-			>
-				What do you do?
-			</button>
-			<button
-				class="rounded-2xl bg-zinc-900 border border-zinc-800 p-2 text-sm sm:text-md hidden md:block suggestion hover:scale-105 transition ease-in-out duration-300"
-				onclick={() => askJasper('What is your advice to developers?')}
-			>
-				What is your advice to developers?
-			</button>
-		</div>
-		<div
-			class="flex flex-row items-center border-2 border-zinc-900 rounded-tl-lg rounded-tr-lg flex-1"
-		>
-			<input
-				type="text"
-				id="askJasperInput"
-				bind:value={message}
-				placeholder="Ask Jasper..."
-				class="p-2 text-white bg-black rounded-lg flex-1 focus:outline-none text-md"
-			/>
-			<button
-				onclick={() => askJasper(message)}
-				class="border-l-2 border-zinc-900 p-2 min-w-[50px] askJasperButton"
-				style="display: {showButton ? 'block' : 'none'}"
-			>
-				<ReturnDownBackOutline size="32" />
-			</button>
-			<div class="loader w-2 mr-6" style="display: {showLoader ? 'block' : 'none'}"></div>
-		</div>
-		<div
-			id="responseContainer"
-			class="flex-col border-l-2 border-r-2 border-b-2 border-zinc-900 rounded-bl-lg rounded-br-lg flex-1"
-			style="display: {showResponseContainer ? 'flex' : 'none'}"
-		>
-			<div class="ml-4 mt-4 flex flex-row gap-2 align-top">
-				<img src="/profile.jpg" alt="Jasper Clarke" class="w-8 h-8 rounded-full" />
-				<strong class="text-lg">Jasper:</strong>
-			</div>
-			<p id="responseText" class="text-lg ml-14 mb-4" style="max-width: 80%">{responseText}</p>
-			<small class="self-center pt-2 pb-2 text-zinc-400">Generated with GPT4o Mini</small>
-		</div>
-		<p class="text-md absolute -bottom-10 self-center text-zinc-200 flex flex-row gap-1">
-			<Construct class="mr-2" /> Under Construction. New site coming soon. <Construct
-				class="ml-2"
-			/>
+		<p>
+			Hey wait, your not supposed to see this? Come back later when I rebuild this part of the site!
 		</p>
 	</div>
 </main>
@@ -237,38 +116,6 @@
 		}
 		100% {
 			transform: translateX(-100%) scalex(-1);
-		}
-	}
-	.loader {
-		width: 10px;
-		aspect-ratio: 1;
-		border-radius: 50%;
-		animation: loader 1s infinite linear alternate;
-	}
-	@keyframes loader {
-		0% {
-			box-shadow:
-				15px 0 #fff,
-				-15px 0 #fff2;
-			background: #fff;
-		}
-		33% {
-			box-shadow:
-				15px 0 #fff,
-				-15px 0 #fff2;
-			background: #fff2;
-		}
-		66% {
-			box-shadow:
-				15px 0 #fff2,
-				-15px 0 #fff;
-			background: #fff2;
-		}
-		100% {
-			box-shadow:
-				15px 0 #fff2,
-				-15px 0 #fff;
-			background: #fff;
 		}
 	}
 </style>
