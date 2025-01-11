@@ -328,9 +328,8 @@
 						<span class="text-sm text-gray-500">Present</span>
 					</div>
 					<p class="text-gray-400">
-						I'm currently looking for work as a full-stack or backend, web or software developer. If
-						you're interested in employing me, please reach out to me at using the contact button
-						below.
+						I'm currently looking for work as a full-stack or backend web/software developer. If
+						you're interested in employing me, please reach out using the contact button below.
 					</p>
 				</div>
 
