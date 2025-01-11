@@ -329,7 +329,7 @@
 					</div>
 					<p class="text-gray-400">
 						I'm currently looking for work as a full-stack or backend, web or software developer. If
-						you're interested in working with me, please reach out to me at using the contact button
+						you're interested in employing me, please reach out to me at using the contact button
 						below.
 					</p>
 				</div>
