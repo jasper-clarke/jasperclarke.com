@@ -397,6 +397,26 @@
 			<a class="btn" href="mailto:me@jasperclarke.com"> Contact Me </a>
 		</div>
 	</div>
+
+	<footer class="py-8 px-6 bg-black">
+		<div
+			class="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm"
+		>
+			<div>
+				© {new Date().getFullYear()} Jasper Clarke. All rights reserved.
+			</div>
+			<div class="flex items-center gap-6">
+				<a href="/blog" class="hover:text-white transition-colors">Blog</a>
+				<a href="https://github.com/jasper-clarke" class="hover:text-white transition-colors"
+					>GitHub</a
+				>
+				<a
+					href="https://www.linkedin.com/in/jasper-clarke/"
+					class="hover:text-white transition-colors">LinkedIn</a
+				>
+			</div>
+		</div>
+	</footer>
 </div>
 
 <style>
