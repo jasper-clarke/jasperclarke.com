@@ -123,7 +123,7 @@
 	<link rel="canonical" href="https://jasperclarke.com" />
 	<meta
 		name="description"
-		content="Meet Jasper Clarke, a backend developer who sees patterns in chaos and beauty in logic, crafting elegant solutions to complex digital challenges."
+		content="Meet Jasper Clarke, a web/software developer who loves solving problems, finding simple solutions to complex challenges and bringing clarity to complicated systems."
 	/>
 	<meta property="og:url" content="https://jasperclarke.com" />
 	<meta property="og:title" content="Jasper Clarke | Backend Developer" />
@@ -141,9 +141,8 @@
 		<div class="max-w-3xl mx-auto px-6 py-24 relative">
 			<h1 class="text-6xl font-light mb-8">Hello, I'm Jasper Clarke</h1>
 			<p class="text-xl text-gray-400 mb-12 leading-relaxed hero-text">
-				I craft digital solutions, but that's just part of my story. I'm someone who sees patterns
-				in chaos and beauty in logic. Every day, I'm driven by the challenge of turning complex
-				problems into elegant solutions.
+				I'm a web/software developer who loves solving problems. I enjoy finding simple solutions to
+				complex challenges and bringing clarity to complicated systems.
 			</p>
 			<div class="h-px w-24 bg-white opacity-30 mb-12 hero-seperator"></div>
 			<p class="text-lg text-gray-500 mb-12 scroll-indicator">Scroll to explore my world</p>
@@ -180,9 +179,9 @@
 						<h2 class="text-sm uppercase tracking-wider text-gray-500">My Approach</h2>
 					</div>
 					<p class="text-3xl font-light leading-relaxed mb-8">
-						I believe in the power of persistence. Being neurodivergent has taught me that different
-						perspectives aren't limitations – they're advantages. They're what make my solutions
-						unique.
+						I believe in the power of persistence. My individual way of seeing the world has taught
+						me that different perspectives aren't limitations – they're advantages. They're what
+						make my solutions unique.
 					</p>
 					<p class="text-gray-400 leading-relaxed">
 						Every challenge I face becomes a story of growth. Whether I'm diving into low-level
@@ -328,8 +327,8 @@
 						<span class="text-sm text-gray-500">Present</span>
 					</div>
 					<p class="text-gray-400">
-						I'm currently looking for work as a full-stack or backend web/software developer. If
-						you're interested in employing me, please reach out using the contact button below.
+						I'm currently looking for work as a full-stack or backend web/software developer. Reach
+						out <span><a href="mailto:me@jasperclarke.com" class="linkanimation">here</a></span>.
 					</p>
 				</div>
 
@@ -342,9 +341,9 @@
 						<span class="text-sm text-gray-500">July 2024 - Nov 2024</span>
 					</div>
 					<p class="text-gray-400">
-						At Cloud Concepts, I primarily worked on building backend systems using PHP and simple
-						reactive frontends using JavaScript. This job gave me the opportunity to learn more
-						about UI and UX design which has been an asset to me.
+						At Cloud Concepts, I primarily worked on building backend systems using PHP and reactive
+						frontends using JavaScript. This job gave me the opportunity to learn more about UI and
+						UX design.
 					</p>
 				</div>
 
@@ -356,13 +355,9 @@
 						</div>
 						<span class="text-sm text-gray-500">Jan 2024 - July 2024</span>
 					</div>
-					<p class="text-gray-400">
-						I mainly decided to pursue this course since I did not have a official certification in
-						programming. As evidenced by my teachers comments:<br />
-						<i
-							>"Jasper, you have clearly demonstrated that your skills in these areas are well
-							beyond what is required in this course." - 'Coby D' TAFE NSW</i
-						>
+					<p class="text-gray-400 italic">
+						"Jasper, you have clearly demonstrated that your skills in these areas are well beyond
+						what is required in this course." - 'Coby D' TAFE NSW
 					</p>
 				</div>
 
@@ -375,10 +370,10 @@
 						<span class="text-sm text-gray-500">2018 - 2024</span>
 					</div>
 					<p class="text-gray-400">
-						I remember starting my programming journey with simple HTML and CSS, then progressing to
-						Python and Django. I've since moved on to JavaScript based web frameworks like React,
-						NextJS, SvelteKit and more. In my free time I have picked up other languages like Java
-						and C through modding games and making my own desktop environment on my Linux computer.
+						I started my programming journey with HTML and CSS, then progressed to Python and
+						Django. I've since moved on to JavaScript based web frameworks like React, NextJS,
+						SvelteKit and more. In my free time I have picked up other languages like Java and C
+						through modding games and making my own desktop environment on my Linux computer.
 					</p>
 				</div>
 			</div>
