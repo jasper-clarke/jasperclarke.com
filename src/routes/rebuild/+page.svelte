@@ -1,5 +1,11 @@
 <script>
-	import { CompassOutline, CodeSlashOutline, RocketOutline } from 'svelte-ionicons';
+	import {
+		CompassOutline,
+		CodeSlashOutline,
+		RocketOutline,
+		BriefcaseOutline,
+		HammerOutline
+	} from 'svelte-ionicons';
 </script>
 
 <!-- SEO -->
@@ -11,7 +17,7 @@
 		content="Meet Jasper Clarke, a backend developer who sees patterns in chaos and beauty in logic, crafting elegant solutions to complex digital challenges."
 	/>
 	<meta property="og:url" content="https://jasperclarke.com" />
-	<meta property="og:title" content="Jasper Clarke | Digital Craftsman & Problem Solver" />
+	<meta property="og:title" content="Jasper Clarke | Backend Developer" />
 	<meta
 		property="og:description"
 		content="I transform complex problems into elegant solutions. Backend developer, bass guitarist, and perpetual learner creating digital experiences that matter."
@@ -22,13 +28,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-black text-white">
-	<!-- Hero - More like an introduction -->
 	<div class="min-h-screen flex items-center relative overflow-hidden">
-		<!-- <div class="absolute top-0 left-0 w-full h-full opacity-5"> -->
-		<!-- 	<div class="absolute w-full h-full border-l-2 border-white" style="left: 33%"></div> -->
-		<!-- 	<div class="absolute w-full h-full border-l-2 border-white" style="left: 66%"></div> -->
-		<!-- </div> -->
-
 		<div class="max-w-3xl mx-auto px-6 py-24 relative">
 			<h1 class="text-6xl font-light mb-8">Hello, I'm Jasper Clarke</h1>
 			<p class="text-xl text-gray-400 mb-12 leading-relaxed">
@@ -94,6 +94,148 @@
 		</div>
 	</div>
 
+	<div class="min-h-screen flex items-center bg-black">
+		<div class="max-w-3xl mx-auto px-6 py-24">
+			<div class="flex items-center gap-4 mb-12">
+				<HammerOutline class="w-8 h-8 opacity-75" />
+				<h2 class="text-sm uppercase tracking-wider text-gray-500">Featured Projects</h2>
+			</div>
+
+			<div class="space-y-16">
+				<div class="group">
+					<div class="flex justify-between items-start mb-4">
+						<h3 class="text-2xl font-light">AtlasWM</h3>
+						<span class="text-sm text-gray-500">Late 2024</span>
+					</div>
+					<p class="text-gray-400 mb-4">
+						After using Linux for years and my curiosity to learn C bursting at the seams, I decided
+						to write my own window manager. It's a simple and lightweight window manager that I've
+						been using for a few months now and it has taught me a lot about memory management in
+						the C ecosystem.
+					</p>
+					<div class="flex gap-3">
+						<span class="text-sm px-3 py-1 border border-gray-700 rounded-full text-gray-400"
+							>C</span
+						>
+						<span class="text-sm px-3 py-1 border border-gray-700 rounded-full text-gray-400"
+							>TOML</span
+						>
+						<span class="text-sm px-3 py-1 border border-gray-700 rounded-full text-gray-400"
+							>Nix</span
+						>
+					</div>
+				</div>
+
+				<div class="group">
+					<div class="flex justify-between items-start mb-4">
+						<h3 class="text-2xl font-light">Website CMS</h3>
+						<span class="text-sm text-gray-500">Mid-Late 2024</span>
+					</div>
+					<p class="text-gray-400 mb-4">
+						This is a website management CMS I built over a weekend to build and deploy multiple
+						websites using PHP and Docker through just the interface. This was inspired by a CMS my
+						employer created when I worked at Cloud Concepts. I gained a much better understand of
+						PHP and its patterns through this project.
+					</p>
+					<div class="flex gap-3">
+						<span class="text-sm px-3 py-1 border border-gray-700 rounded-full text-gray-400"
+							>PHP</span
+						>
+						<span class="text-sm px-3 py-1 border border-gray-700 rounded-full text-gray-400"
+							>Docker</span
+						>
+						<span class="text-sm px-3 py-1 border border-gray-700 rounded-full text-gray-400"
+							>NGINX</span
+						>
+					</div>
+				</div>
+
+				<div class="group">
+					<div class="flex justify-between items-start mb-4">
+						<h3 class="text-2xl font-light">There Is A Reason</h3>
+						<span class="text-sm text-gray-500">Mid 2024</span>
+					</div>
+					<p class="text-gray-400 mb-4">
+						My interest in the Golang programming language sprouted into the idea to make my own
+						game. I had always been fascinated with graphics programming and wanted to learn more
+						about it. This project was a chance to explore the language and its ecosystem.
+					</p>
+					<div class="flex gap-3">
+						<span class="text-sm px-3 py-1 border border-gray-700 rounded-full text-gray-400"
+							>Golang</span
+						>
+						<span class="text-sm px-3 py-1 border border-gray-700 rounded-full text-gray-400"
+							>OpenGL</span
+						>
+						<span class="text-sm px-3 py-1 border border-gray-700 rounded-full text-gray-400"
+							>Image Manipulation</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="min-h-screen flex items-center bg-zinc-900">
+		<div class="max-w-3xl mx-auto px-6 py-24">
+			<div class="flex items-center gap-4 mb-12">
+				<BriefcaseOutline class="w-8 h-8 opacity-75" />
+				<h2 class="text-sm uppercase tracking-wider text-gray-500">Education &amp; Experience</h2>
+			</div>
+
+			<div class="space-y-16">
+				<div>
+					<div class="flex justify-between items-start mb-4">
+						<div>
+							<h3 class="text-2xl font-light">PHP Developer</h3>
+							<p class="text-gray-500">Cloud Concepts</p>
+						</div>
+						<span class="text-sm text-gray-500">July 2024 - Nov 2024</span>
+					</div>
+					<p class="text-gray-400">
+						At Cloud Concepts, I primarily worked on building backend systems using PHP and simple
+						reactive frontends using JavaScript. This job gave me the opportunity to learn more
+						about UI and UX design which has been an asset to me.
+					</p>
+				</div>
+
+				<div>
+					<div class="flex justify-between items-start mb-4">
+						<div>
+							<h3 class="text-2xl font-light">Certificate III in Programming (Web Development)</h3>
+							<p class="text-gray-500">TAFE NSW</p>
+						</div>
+						<span class="text-sm text-gray-500">Jan 2024 - July 2024</span>
+					</div>
+					<p class="text-gray-400">
+						I mainly decided to pursue this course since I did not have a official certification in
+						programming. As evidenced by my teachers comments:<br />
+						<i
+							>"Jasper, you have clearly demonstrated that your skills in these areas are well
+							beyond what is required in this course." - 'Coby D' TAFE NSW</i
+						>
+					</p>
+				</div>
+
+				<div>
+					<div class="flex justify-between items-start mb-4">
+						<div>
+							<h3 class="text-2xl font-light">Programming and Web Development</h3>
+							<p class="text-gray-500">Self Taught</p>
+						</div>
+						<span class="text-sm text-gray-500">2018 - 2024</span>
+					</div>
+					<p class="text-gray-400">
+						I remember starting my programming journey with simple HTML and CSS, then progressing to
+						Python and Django. I've since moved on to JavaScript based web frameworks like React,
+						NextJS, SvelteKit and more. In my free time I have picked up other languages like Java
+						and C through modding games and making my own desktop environment on my Linux computer.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Contact Section -->
 	<div class="min-h-screen flex items-center">
 		<div class="max-w-3xl mx-auto px-6 py-24 text-center">
@@ -102,11 +244,7 @@
 				Whether you have a challenge that needs solving or a story that needs telling, I'd love to
 				hear from you.
 			</p>
-			<button
-				class="border border-white px-8 py-3 text-lg hover:bg-white hover:text-black transition-colors"
-			>
-				Start a Conversation
-			</button>
+			<button class="btn"> Contact Me </button>
 		</div>
 	</div>
 </div>
@@ -141,5 +279,54 @@
 		100% {
 			transform: translateX(-100%) scalex(-1);
 		}
+	}
+
+	.btn {
+		background: #000;
+		box-shadow:
+			4px 4px #000,
+			9px 9px #3f3f46;
+		color: #3f3f46;
+		text-transform: lowercase;
+		border: solid 2px #3f3f46;
+
+		text-decoration: none;
+
+		padding: 18px 32px;
+		display: inline-flex;
+		align-items: center;
+		font-size: 14px;
+		font-weight: 700;
+		position: relative;
+		z-index: 1;
+		transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+		cursor: pointer;
+		overflow: hidden;
+		transition-delay: 0s !important;
+		text-transform: uppercase !important;
+		letter-spacing: 1.5px;
+		font-family: sans-serif;
+	}
+	.btn::before {
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		width: 0%;
+		height: 100%;
+		background: #151515;
+		z-index: -1;
+		transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	}
+	.btn:hover::before {
+		width: 100%;
+		left: 0;
+		right: unset;
+	}
+	.btn:hover {
+		box-shadow:
+			0 0 #000,
+			0 0 #151515;
+		color: white;
 	}
 </style>
