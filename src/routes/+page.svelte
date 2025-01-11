@@ -391,8 +391,8 @@
 		<div class="max-w-3xl mx-auto px-6 py-24 text-center">
 			<h2 class="text-4xl font-light mb-8">Let's Write the Next Chapter Together</h2>
 			<p class="text-xl text-gray-400 mb-12">
-				Whether you have a challenge that needs solving or a story that needs telling, I'd love to
-				hear from you.
+				Whether you have a challenge that needs solving or a vision that needs bringing to life, I'd
+				love to hear from you.
 			</p>
 			<a class="btn" href="mailto:me@jasperclarke.com"> Contact Me </a>
 		</div>
@@ -436,7 +436,7 @@
 		box-shadow:
 			4px 4px #000,
 			9px 9px #3f3f46;
-		color: #3f3f46;
+		color: white;
 		text-transform: lowercase;
 		border: solid 2px #3f3f46;
 
