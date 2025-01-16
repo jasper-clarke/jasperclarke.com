@@ -48,7 +48,7 @@
 <svelte:head>
 	<title>Podcasts - Jasper Clarke</title>
 
-	<link rel="canonical" href="https://jasperclarke.com/blog" />
+	<link rel="canonical" href="https://jasperclarke.com/podcasts" />
 
 	<meta
 		name="description"

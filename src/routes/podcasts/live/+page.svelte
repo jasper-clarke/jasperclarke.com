@@ -151,6 +151,20 @@
 	}
 </script>
 
+<!-- SEO -->
+<svelte:head>
+	<title>Podcasting Live with Jasper Clarke</title>
+
+	<link rel="canonical" href="https://jasperclarke.com/podcasts/live" />
+
+	<meta
+		name="description"
+		content="Exploring the intersections of technology, personal growth, and creative problem-solving. Join me (Jasper Clarke) for in-depth conversations and insights in my own podcast collection."
+	/>
+
+	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+	<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+</svelte:head>
 <Header position="absolute" />
 <a
 	class="group/btn fixed top-16 left-4 flex-row gap-4 flex w-fit z-40"
