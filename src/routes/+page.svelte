@@ -7,7 +7,8 @@
 		HammerOutline,
 		LogoGithub,
 		LogoLinkedin,
-		Book
+		Book,
+		Mic
 	} from 'svelte-ionicons';
 	import { onMount } from 'svelte';
 	import gsap from 'gsap';
@@ -163,6 +164,10 @@
 				</a>
 				<a href="/blog" class="opacity-50 hover:opacity-100 transition-opacity social-link">
 					<Book class="w-6 h-6" />
+					<span class="sr-only">Blog</span>
+				</a>
+				<a href="/podcasts" class="opacity-50 hover:opacity-100 transition-opacity social-link">
+					<Mic class="w-6 h-6" />
 					<span class="sr-only">Blog</span>
 				</a>
 			</div>

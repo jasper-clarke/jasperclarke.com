@@ -35,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@supabase/supabase-js": "^2.47.14",
 		"@tailwindcss/typography": "^0.5.15",
 		"gsap": "^3.12.5",
 		"icecast-metadata-player": "^1.17.9",

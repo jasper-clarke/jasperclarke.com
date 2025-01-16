@@ -14,12 +14,10 @@ export async function GET() {
 		) {
 			const data = await response.json();
 			if (data.icestats.source) {
-				return new Response(
-					JSON.stringify({ isLive: true, streamTitle: data.icestats.source.server_name }),
-					{
-						headers: { 'Content-Type': 'application/json' }
-					}
-				);
+				const streamInfo = JSON.parse(data.icestats.source.title);
+				return new Response(JSON.stringify({ isLive: true, streamTitle: streamInfo.title }), {
+					headers: { 'Content-Type': 'application/json' }
+				});
 			}
 		}
 

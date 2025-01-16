@@ -37,7 +37,7 @@
 		};
 	});
 
-	let activeTab = $state('recorded');
+	let activeTab = $state('live');
 
 	function setActiveTab(tab: string) {
 		activeTab = tab;
@@ -77,7 +77,7 @@
 		<div class="max-w-3xl mx-auto px-6 py-24 relative">
 			<div class="flex items-center gap-4 mb-8">
 				<MicOutline class="w-12 h-12 opacity-75" />
-				<h1 class="text-4xl font-light">The Architechs Podcast</h1>
+				<h1 class="text-4xl font-light">The Archi-techs Podcast</h1>
 			</div>
 			<p class="text-xl text-gray-400 mb-12 leading-relaxed">
 				Exploring the intersections of technology, personal growth, and creative problem-solving.
@@ -91,18 +91,6 @@
 		<div class="max-w-3xl mx-auto px-6">
 			<div class="flex space-x-8">
 				<button
-					onclick={() => setActiveTab('recorded')}
-					class="py-4 relative {activeTab === 'recorded' ? 'text-white' : 'text-gray-500'}"
-				>
-					<div class="flex items-center gap-2">
-						<PlayCircleOutline class="w-4 h-4" />
-						<span>Recorded Episodes</span>
-					</div>
-					{#if activeTab === 'recorded'}
-						<div class="absolute bottom-0 left-0 w-full h-px bg-white"></div>
-					{/if}
-				</button>
-				<button
 					onclick={() => setActiveTab('live')}
 					class="py-4 relative {activeTab === 'live' ? 'text-white' : 'text-gray-500'}"
 				>
@@ -111,6 +99,18 @@
 						<span>Live Sessions</span>
 					</div>
 					{#if activeTab === 'live'}
+						<div class="absolute bottom-0 left-0 w-full h-px bg-white"></div>
+					{/if}
+				</button>
+				<button
+					onclick={() => setActiveTab('recorded')}
+					class="py-4 relative {activeTab === 'recorded' ? 'text-white' : 'text-gray-500'}"
+				>
+					<div class="flex items-center gap-2">
+						<PlayCircleOutline class="w-4 h-4" />
+						<span>Recorded Episodes</span>
+					</div>
+					{#if activeTab === 'recorded'}
 						<div class="absolute bottom-0 left-0 w-full h-px bg-white"></div>
 					{/if}
 				</button>
@@ -192,31 +192,31 @@
 		{:else}
 			<div class="space-y-12">
 				<!-- Upcoming Live Session -->
-				<!-- <div class="border border-zinc-800 rounded-lg p-6 relative overflow-hidden"> -->
-				<!-- 	<div class="absolute top-0 right-0 bg-blue-500 px-3 py-1 text-sm">Next Live</div> -->
-				<!-- 	<h2 class="text-2xl font-light mb-4">Open Source Contributions: Live Coding</h2> -->
-				<!-- 	<div class="flex items-center gap-4 text-gray-500 text-sm mb-4"> -->
-				<!-- 		<span class="flex items-center gap-1"> -->
-				<!-- 			<CalendarClearOutline class="w-4 h-4" /> -->
-				<!-- 			Jan 30, 2024 -->
-				<!-- 		</span> -->
-				<!-- 		<span class="flex items-center gap-1"> -->
-				<!-- 			<TimeOutline class="w-4 h-4" /> -->
-				<!-- 			2:00 PM EST -->
-				<!-- 		</span> -->
-				<!-- 	</div> -->
-				<!-- 	<p class="text-gray-400 mb-6"> -->
-				<!-- 		Join me for a live coding session where we'll contribute to open source projects -->
-				<!-- 		together. We'll walk through the process of finding issues, understanding the codebase, -->
-				<!-- 		and making meaningful contributions. -->
-				<!-- 	</p> -->
-				<!-- 	<button -->
-				<!-- 		class="flex items-center gap-2 px-4 py-2 border border-white hover:bg-white hover:text-black transition-colors" -->
-				<!-- 	> -->
-				<!-- 		<span>Set Reminder</span> -->
-				<!-- 		<ArrowForward class="w-4 h-4" /> -->
-				<!-- 	</button> -->
-				<!-- </div> -->
+				<div class="border border-zinc-800 rounded-lg p-6 relative overflow-hidden">
+					<div class="absolute top-0 right-0 bg-blue-500 px-3 py-1 text-sm">Next Live</div>
+					<h2 class="text-2xl font-light mb-4">Archi-techs</h2>
+					<div class="flex items-center gap-4 text-gray-500 text-sm mb-4">
+						<span class="flex items-center gap-1">
+							<CalendarClearOutline class="w-4 h-4" />
+							Sunday, Every Week
+						</span>
+						<span class="flex items-center gap-1">
+							<TimeOutline class="w-4 h-4" />
+							10:00 AM AEDT
+						</span>
+					</div>
+					<p class="text-gray-400 mb-6">
+						Join me each week to discuss the latest trends in technology, personal growth, and
+						creative problem-solving. We'll explore topics like open source contributions, building
+						resilient systems, and the human side of code.
+					</p>
+					<!-- <button -->
+					<!-- 	class="flex items-center gap-2 px-4 py-2 border border-white hover:bg-white hover:text-black transition-colors" -->
+					<!-- > -->
+					<!-- 	<span>Set Reminder</span> -->
+					<!-- 	<ArrowForward class="w-4 h-4" /> -->
+					<!-- </button> -->
+				</div>
 				<!---->
 				<!-- <div class="group"> -->
 				<!-- 	<div class="flex justify-between items-start mb-4"> -->

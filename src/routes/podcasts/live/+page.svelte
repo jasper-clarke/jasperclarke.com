@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Header from '$lib/components/Header.svelte';
 	import { onMount } from 'svelte';
 	import {
 		PauseCircleOutline,
@@ -22,6 +23,7 @@
 	let streamDescription: string = $state('');
 	let streamListeners: number = $state(0);
 	let streamTime = $state('');
+	let streamArtwork: string = $state('');
 
 	function calculateTimeDifference(timestamp: string) {
 		const currentTime = new Date();
@@ -63,9 +65,11 @@
 				res.json()
 			);
 			if (metadata.icestats.source) {
-				streamTitle = metadata.icestats.source.server_name;
-				streamDescription = metadata.icestats.source.server_description;
+				const streamInfo = JSON.parse(metadata.icestats.source.title);
+				streamTitle = streamInfo.title;
+				streamDescription = streamInfo.desc;
 				streamListeners = metadata.icestats.source.listeners;
+				streamArtwork = streamInfo.image;
 				if (streamTime === '') {
 					calculateTimeDifference(metadata.icestats.source.stream_start_iso8601);
 				}
@@ -146,16 +150,19 @@
 	}
 </script>
 
+<Header position="absolute" />
 <div class="h-screen bg-black text-white flex flex-col">
 	<!-- Main Content Grid -->
-	<div class="flex h-full">
+	<div class="flex flex-col md:flex-row h-full">
 		<!-- Left Column - Artwork -->
-		<div class="w-1/2 h-full flex items-center justify-center p-12 border-r border-zinc-900">
-			<div class="relative w-full max-w-lg aspect-square">
+		<div
+			class="w-full h-1/2 md:w-1/2 md:h-full flex items-center justify-center p-12 border-r border-zinc-900 mt-12 md:mt-0"
+		>
+			<div class="relative w-full max-w-sm md:max-w-lg aspect-square">
 				<!-- Artwork Container -->
 				<div class="absolute inset-0 bg-zinc-900 rounded-lg overflow-hidden">
 					<img
-						src="/profile.jpg"
+						src={streamArtwork || '/profile.jpg'}
 						alt="Episode Artwork"
 						class="w-full h-full object-cover opacity-80"
 					/>
@@ -171,7 +178,7 @@
 		</div>
 
 		<!-- Right Column - Info & Controls -->
-		<div class="w-1/2 h-full flex flex-col p-12">
+		<div class="w-full h-1/2 md:w-1/2 md:h-full flex flex-col pl-12 pr-12 pb-12 md:p-12 md:mt-6">
 			<!-- Episode Info -->
 			<div class="flex-1">
 				<div class="space-y-6 max-w-lg">
