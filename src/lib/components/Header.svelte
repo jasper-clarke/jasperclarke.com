@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { animate } from '$lib/animate.js';
-	import BuyMeACoffee from './BuyMeACoffee.svelte';
 	let { position } = $props();
 </script>
 
