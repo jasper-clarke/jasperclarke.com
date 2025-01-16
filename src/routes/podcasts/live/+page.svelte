@@ -11,6 +11,7 @@
 		TimeOutline,
 		ArrowForwardCircleOutline
 	} from 'svelte-ionicons';
+	import { animate } from '$lib/animate.js';
 
 	let isPlaying = $state(false);
 	let isMuted = $state(false);
@@ -151,6 +152,43 @@
 </script>
 
 <Header position="absolute" />
+<a
+	class="group/btn fixed top-16 left-4 flex-row gap-4 flex w-fit z-40"
+	href="/podcasts"
+	use:animate={{ type: 'from', duration: 1, x: -200, ease: 'expo.inOut' }}
+>
+	<div class="flex items-center opacity-50 group-hover/btn:opacity-100 transition-opacity">
+		<svg
+			role="img"
+			viewBox="0 0 16 16"
+			width="10"
+			height="10"
+			style="transform: scale(-1.5, 1.5); transform-origin: center;"
+			fill="currentColor"
+			class="mt-1"
+		>
+			<path
+				d="M7.293 1.707L13.586 8l-6.293 6.293a1 1 0 001.414 1.414l7-7a.999.999 0 000-1.414l-7-7a1 1 0 00-1.414 1.414z"
+			></path>
+		</svg>
+		<svg
+			role="img"
+			viewBox="0 0 16 16"
+			width="0"
+			height="10"
+			fill="currentColor"
+			style="transform: translateX(-0.6em);"
+			class="w-0 group-hover/btn:w-[0.7em] h-[0.7em] mt-1 ease-out duration-200 transition-all transform-gpu"
+		>
+			<path d="M1 9h14a1 1 0 000-2H1a1 1 0 000 2z"></path>
+		</svg>
+		<h2
+			class="font-serif text-3xl group-hover/btn:pl-2 ease-out duration-200 transition-all transform-gpu"
+		>
+			Podcasts
+		</h2>
+	</div>
+</a>
 <div class="h-screen bg-black text-white flex flex-col">
 	<!-- Main Content Grid -->
 	<div class="flex flex-col md:flex-row h-full">
