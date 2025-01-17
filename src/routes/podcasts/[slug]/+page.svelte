@@ -16,6 +16,7 @@
 
 	let isPlaying = $state(false);
 	let isMuted = $state(false);
+	let playbackRate = $state(1);
 	let volume = $state(1);
 	let audio: HTMLAudioElement;
 	let currentTime = $state(0);
@@ -38,6 +39,13 @@
 		}
 	}
 
+	function setPlaybackRate(rate: number) {
+		if (audio) {
+			playbackRate = rate;
+			audio.playbackRate = rate;
+		}
+	}
+
 	onMount(() => {
 		const fetchMetadata = async () => {
 			// Get podcasts object from array that matches data.podcast
@@ -51,6 +59,7 @@
 		fetchMetadata();
 		audio = new Audio(`https://r2.jasperclarke.com/${data.podcast}.mp3`);
 		audio.volume = volume;
+		audio.playbackRate = playbackRate;
 
 		// Start playing automatically
 		audio
@@ -279,6 +288,44 @@
 								class="flex-1 h-1 bg-zinc-800 rounded-full appearance-none cursor-pointer accent-white"
 							/>
 						</div>
+					</div>
+					<div class="flex items-center gap-4">
+						<button
+							onclick={() => setPlaybackRate(1)}
+							class="text-sm p-1 px-2 rounded hover:bg-zinc-900 transition-colors {playbackRate ===
+							1
+								? 'bg-zinc-900'
+								: ''}"
+						>
+							1x
+						</button>
+						<button
+							onclick={() => setPlaybackRate(1.25)}
+							class="text-sm p-1 px-2 rounded hover:bg-zinc-900 transition-colors {playbackRate ===
+							1.25
+								? 'bg-zinc-900'
+								: ''}"
+						>
+							1.25x
+						</button>
+						<button
+							onclick={() => setPlaybackRate(1.5)}
+							class="text-sm p-1 px-2 rounded hover:bg-zinc-900 transition-colors {playbackRate ===
+							1.5
+								? 'bg-zinc-900'
+								: ''}"
+						>
+							1.5x
+						</button>
+						<button
+							onclick={() => setPlaybackRate(2)}
+							class="text-sm p-1 px-2 rounded hover:bg-zinc-900 transition-colors {playbackRate ===
+							2
+								? 'bg-zinc-900'
+								: ''}"
+						>
+							2x
+						</button>
 					</div>
 
 					<!-- Episode Notes Link -->
