@@ -1,37 +1,36 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
-
 	import BlogCard from '$lib/components/BlogCard.svelte';
 	import BuyMeACoffee from '$lib/components/BuyMeACoffee.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import { url, title } from '$lib/config';
 	let { data } = $props();
+
 	// List of all categories
 	const categories = data.posts
 		.map((post) => post.categories)
 		.flat()
 		.filter((category, i, arr) => arr.indexOf(category) === i);
-	let posts = $state(data.posts);
-	let firstPosts = $state(posts.slice(0, 3));
-	let search = $state(data.category ? '#' + data.category : '');
-	run(() => {
-		if (search !== '') {
-			// Filter post titles and descriptions by search query
+
+	let search: string = $state(data.category ? '#' + data.category : '');
+
+	let posts = $derived.by(() => {
+		if (search === '') {
+			return data.posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+		} else {
 			if (search.startsWith('#')) {
 				const category = search.slice(1);
-				posts = data.posts.filter((post) => post.categories.includes(category));
+				return data.posts.filter((post) => post.categories.includes(category));
 			} else {
-				posts = data.posts.filter(
+				return data.posts.filter(
 					(post) =>
 						post.title.toLowerCase().includes(search.toLowerCase()) ||
 						post.description.toLowerCase().includes(search.toLowerCase())
 				);
-				posts = posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 			}
-		} else {
-			posts = data.posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-			firstPosts = posts.slice(0, 3);
 		}
+	});
+
+	let firstPosts = $derived.by(() => {
+		return posts.slice(0, 3);
 	});
 </script>
 

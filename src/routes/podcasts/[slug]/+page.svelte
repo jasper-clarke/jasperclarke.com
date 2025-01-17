@@ -199,7 +199,6 @@
 				<div class="space-y-6 max-w-lg">
 					<div>
 						<h1 class="text-4xl font-light mb-2">{streamTitle || 'Loading Title...'}</h1>
-						<p class="text-lg text-gray-400">Live Session</p>
 					</div>
 
 					<p class="text-gray-400 leading-relaxed">
@@ -274,11 +273,11 @@
 								step="0.01"
 								bind:value={volume}
 								oninput={handleVolumeChange}
-								class="flex-1 h-1 bg-zinc-800 rounded-full appearance-none cursor-pointer accent-white"
+								class="flex-1 h-1 bg-zinc-800 rounded-full appearance-none cursor-pointer accent-white max-w-24"
 							/>
 						</div>
 					</div>
-					<div class="flex items-center gap-4">
+					<div class="flex sm:flex-row justify-center sm:justify-normal items-center gap-4 md:mt-4">
 						<button
 							onclick={() => setPlaybackRate(1)}
 							class="text-sm p-1 px-2 rounded hover:bg-zinc-900 transition-colors {playbackRate ===
