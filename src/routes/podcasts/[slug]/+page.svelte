@@ -61,17 +61,6 @@
 		audio.volume = volume;
 		audio.playbackRate = playbackRate;
 
-		// Start playing automatically
-		audio
-			.play()
-			.then(() => {
-				isPlaying = true;
-			})
-			.catch((error) => {
-				console.error('Auto-play failed:', error);
-				isPlaying = false;
-			});
-
 		// Update time every second
 		const timeInterval = setInterval(() => {
 			if (audio && isPlaying) {
