@@ -3,13 +3,13 @@
 	import Header from '$lib/components/Header.svelte';
 	import { onMount } from 'svelte';
 	import {
-		ArrowForward,
 		CalendarClearOutline,
 		MicOutline,
 		PlayCircleOutline,
 		Radio,
 		TimeOutline
 	} from 'svelte-ionicons';
+	import { podcasts } from '$lib/podcasts.js';
 
 	let isLive: boolean = $state(false);
 	let streamName: string = $state('');
@@ -18,7 +18,7 @@
 	async function updateStatus() {
 		try {
 			const response = await fetch('/api/checkLive');
-			const data = await response.json();
+			const data: { isLive: boolean; streamTitle: string } = await response.json();
 			isLive = data.isLive;
 			streamName = data.streamTitle;
 		} catch (error) {
@@ -33,6 +33,7 @@
 		checkInterval = setInterval(updateStatus, 30000);
 
 		return () => {
+			// @ts-ignore
 			clearInterval(checkInterval);
 		};
 	});
@@ -231,31 +232,32 @@
 					<!-- 	<ArrowForward class="w-4 h-4" /> -->
 					<!-- </button> -->
 				</div>
-				<!---->
-				<!-- <div class="group"> -->
-				<!-- 	<div class="flex justify-between items-start mb-4"> -->
-				<!-- 		<div> -->
-				<!-- 			<h2 class="text-2xl font-light mb-2">Building a Go Microservice</h2> -->
-				<!-- 			<div class="flex items-center gap-4 text-gray-500 text-sm"> -->
-				<!-- 				<span class="flex items-center gap-1"> -->
-				<!-- 					<CalendarClearOutline class="w-4 h-4" /> -->
-				<!-- 					Dec 15, 2023 -->
-				<!-- 				</span> -->
-				<!-- 				<span class="flex items-center gap-1"> -->
-				<!-- 					<TimeOutline class="w-4 h-4" /> -->
-				<!-- 					1.5 hours -->
-				<!-- 				</span> -->
-				<!-- 			</div> -->
-				<!-- 		</div> -->
-				<!-- 		<button class="p-2 hover:bg-zinc-900 rounded-full transition-colors"> -->
-				<!-- 			<PlayCircleOutline class="w-6 h-6" /> -->
-				<!-- 		</button> -->
-				<!-- 	</div> -->
-				<!-- 	<p class="text-gray-400"> -->
-				<!-- 		Recording of our live session building a microservice in Go from scratch. Watch the -->
-				<!-- 		development process and decision-making in real-time. -->
-				<!-- 	</p> -->
-				<!-- </div> -->
+				{#each podcasts as podcast}
+					<div class="group">
+						<div class="flex justify-between items-start mb-4">
+							<div>
+								<h2 class="text-2xl font-light mb-2">{podcast.title}</h2>
+								<div class="flex items-center gap-4 text-gray-500 text-sm">
+									<span class="flex items-center gap-1">
+										<CalendarClearOutline class="w-4 h-4" />
+										{podcast.date}
+									</span>
+									<span class="flex items-center gap-1">
+										<TimeOutline class="w-4 h-4" />
+										{podcast.duration}
+									</span>
+								</div>
+							</div>
+							<a
+								href="/podcasts/{podcast.slug}"
+								class="p-2 hover:bg-zinc-900 rounded-full transition-colors"
+							>
+								<PlayCircleOutline class="w-6 h-6" />
+							</a>
+						</div>
+						<p class="text-gray-400">{podcast.description}</p>
+					</div>
+				{/each}
 			</div>
 		{/if}
 	</div>

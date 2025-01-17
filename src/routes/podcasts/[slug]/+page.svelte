@@ -4,25 +4,15 @@
 	import {
 		PauseCircleOutline,
 		PlayCircleOutline,
-		Radio,
 		VolumeMediumOutline,
 		VolumeMuteOutline,
-		TimeOutline,
 		ArrowBackOutline,
 		ArrowForwardOutline
 	} from 'svelte-ionicons';
 	import { animate } from '$lib/animate.js';
+	import { podcasts } from '$lib/podcasts.js';
 
 	let { data } = $props();
-
-	const podcasts = [
-		{
-			slug: 'architechs_ep1',
-			title: 'The Back, The Front, and the In Between - Architechs EP1',
-			description:
-				'In this pilot episode, Jasper explores the fundamental patterns behind web page delivery and examines how various languages and frameworks have shaped modern web development.'
-		}
-	];
 
 	let isPlaying = $state(false);
 	let isMuted = $state(false);
@@ -42,6 +32,12 @@
 		return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 	}
 
+	function updateProgress() {
+		if (audio && duration > 0) {
+			progress = (currentTime / duration) * 100;
+		}
+	}
+
 	onMount(() => {
 		const fetchMetadata = async () => {
 			// Get podcasts object from array that matches data.podcast
@@ -49,10 +45,11 @@
 			if (podcast) {
 				streamTitle = podcast.title;
 				streamDescription = podcast.description;
+				streamArtwork = podcast.image || '/profile.jpg';
 			}
 		};
 		fetchMetadata();
-		audio = new Audio(`/api/podcasts/${data.podcast}.mp3`);
+		audio = new Audio(`https://r2.jasperclarke.com/${data.podcast}.mp3`);
 		audio.volume = volume;
 
 		// Start playing automatically
@@ -71,6 +68,7 @@
 			if (audio && isPlaying) {
 				currentTime = audio.currentTime;
 				duration = audio.duration || 0;
+				updateProgress();
 			}
 		}, 1000);
 
@@ -129,7 +127,7 @@
 <svelte:head>
 	<title>Podcasting Live with Jasper Clarke</title>
 
-	<link rel="canonical" href="https://jasperclarke.com/podcasts/live" />
+	<link rel="canonical" href="https://jasperclarke.com/podcasts/{data.podcast}" />
 
 	<meta
 		name="description"
@@ -141,7 +139,7 @@
 </svelte:head>
 <Header position="absolute" />
 <a
-	class="group/btn fixed top-16 left-4 flex-row gap-4 flex w-fit z-40"
+	class="group/btn absolute top-16 left-4 flex-row gap-4 flex w-fit z-40"
 	href="/podcasts"
 	use:animate={{ type: 'from', duration: 1, x: -200, ease: 'expo.inOut' }}
 >
@@ -192,21 +190,14 @@
 						alt="Episode Artwork"
 						class="w-full h-full object-cover opacity-80"
 					/>
-					<!-- Live Indicator Overlay -->
-					<div
-						class="absolute top-6 left-6 flex items-center gap-2 bg-black/50 px-3 py-1.5 rounded-full"
-					>
-						<Radio class="w-4 h-4 text-red-500" />
-						<span class="text-sm font-medium">LIVE</span>
-					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Right Column - Info & Controls -->
-		<div class="w-full h-1/2 md:w-1/2 md:h-full flex flex-col pl-12 pr-12 pb-12 md:p-12 md:mt-6">
+		<div class="w-full h-1/2 md:w-1/2 md:h-full flex flex-col pl-12 pr-12 pb-12 md:p-12">
 			<!-- Episode Info -->
-			<div class="flex-1">
+			<div class="flex-1 md:mt-6">
 				<div class="space-y-6 max-w-lg">
 					<div>
 						<h1 class="text-4xl font-light mb-2">{streamTitle || 'Loading Title...'}</h1>
@@ -216,13 +207,6 @@
 					<p class="text-gray-400 leading-relaxed">
 						{streamDescription || 'Loading Description...'}
 					</p>
-
-					<div class="flex items-center gap-6 text-gray-400">
-						<div class="flex items-center gap-2">
-							<TimeOutline class="w-4 h-4" />
-							<span>{formatTime(currentTime)}</span>
-						</div>
-					</div>
 				</div>
 			</div>
 
@@ -246,7 +230,7 @@
 					</div>
 
 					<!-- Play/Pause, Skip, and Volume -->
-					<div class="flex items-center gap-8">
+					<div class="flex flex-col sm:flex-row items-center gap-8">
 						<div class="flex items-center gap-4">
 							<button
 								onclick={() => skip(-10)}
@@ -274,7 +258,7 @@
 							</button>
 						</div>
 
-						<div class="flex items-center gap-4 flex-1">
+						<div class="hidden sm:flex items-center gap-4 flex-1">
 							<button
 								onclick={toggleMute}
 								class="p-2 hover:bg-zinc-900 rounded-full transition-colors"
@@ -298,11 +282,11 @@
 					</div>
 
 					<!-- Episode Notes Link -->
-					<div class="mt-6 text-sm text-gray-500">
-						<a href="#" class="hover:text-white transition-colors"
-							>View episode notes and resources →</a
-						>
-					</div>
+					<!-- <div class="mt-6 text-sm text-gray-500"> -->
+					<!-- 	<a href="#" class="hover:text-white transition-colors" -->
+					<!-- 		>View episode notes and resources →</a -->
+					<!-- 	> -->
+					<!-- </div> -->
 				</div>
 			</div>
 		</div>
