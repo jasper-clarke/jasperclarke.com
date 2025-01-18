@@ -166,10 +166,10 @@
 					<Book class="w-6 h-6" />
 					<span class="sr-only">Blog</span>
 				</a>
-				<a href="/podcasts" class="opacity-50 hover:opacity-100 transition-opacity social-link">
-					<Mic class="w-6 h-6" />
-					<span class="sr-only">Blog</span>
-				</a>
+				<!-- <a href="/podcasts" class="opacity-50 hover:opacity-100 transition-opacity social-link"> -->
+				<!-- 	<Mic class="w-6 h-6" /> -->
+				<!-- 	<span class="sr-only">Podcasts</span> -->
+				<!-- </a> -->
 			</div>
 		</div>
 	</div>
