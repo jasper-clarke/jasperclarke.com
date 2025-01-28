@@ -9,7 +9,7 @@
 	function calculateDays() {
 		const today = new Date();
 		const diffTime = Math.abs(today.getTime() - startDate.getTime());
-		dayCount = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+		dayCount = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) - 1;
 	}
 
 	onMount(() => {
