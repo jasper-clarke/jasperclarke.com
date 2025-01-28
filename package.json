@@ -39,6 +39,7 @@
 		"@tailwindcss/typography": "^0.5.15",
 		"gsap": "^3.12.5",
 		"icecast-metadata-player": "^1.17.9",
+		"instafeed.js": "^2.0.0",
 		"mdsvex": "^0.12.3",
 		"rehype-slug": "^6.0.0",
 		"remark-toc": "^9.0.0",

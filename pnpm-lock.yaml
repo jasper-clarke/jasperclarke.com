@@ -20,6 +20,9 @@ importers:
       icecast-metadata-player:
         specifier: ^1.17.9
         version: 1.17.9
+      instafeed.js:
+        specifier: ^2.0.0
+        version: 2.0.0
       mdsvex:
         specifier: ^0.12.3
         version: 0.12.3(svelte@5.10.0)
@@ -1060,6 +1063,9 @@ packages:
 
   import-meta-resolve@4.1.0:
     resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
+
+  instafeed.js@2.0.0:
+    resolution: {integrity: sha512-k7khLgozabWoUNoZtU1UV5+hTyYI+hJJi7GosWV0TFp7xaT+buL7eNt6utN7Af+3TeMGHc59DFrcXddtS+X0qw==}
 
   is-binary-path@2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
@@ -2624,6 +2630,8 @@ snapshots:
       synaudio: 0.3.5
 
   import-meta-resolve@4.1.0: {}
+
+  instafeed.js@2.0.0: {}
 
   is-binary-path@2.1.0:
     dependencies:
