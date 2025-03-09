@@ -11,6 +11,7 @@ published: true
 ---
 
 *Inspired by [this post](https://dev.to/manyeya/how-i-integrate-svelte-with-gsap-3-4ll0)*
+
 GSAP is, in my opinion, the go-to library for creating page animations.
 
 If however you have ever tried to use GSAP with Svelte you will know that it can be a cluttered mess of code and a bit fidgety to use.
@@ -59,18 +60,19 @@ export function animate(node, { type, ...args }) {
 ```
 
 ```svelte
-	<a
-		use:animate={{
-			type: 'from',
-			duration: 1,
-			scale: 0.9,
-			opacity: 0.5,
-			ease: 'expo.inOut',
-		}}
-	>Link</a>
+<!-- +page.svelte -->
+<a
+  use:animate={{
+    type: 'from',
+    duration: 1,
+    scale: 0.9,
+    opacity: 0.5,
+    ease: 'expo.inOut',
+  }}
+>Link</a>
 ```
 
-There are still a problem with this though. Since it's in JavaScript, there is no type checking and you can't use the autocomplete in your IDE.
+There is still a problem with this though. Since it's in JavaScript, there is no type checking and you can't use the autocomplete in your IDE.
 
 After making a few changes it now fully supports TypeScript and meets all the requirements of a Svelte action so the LSP doesn't complain.
 
