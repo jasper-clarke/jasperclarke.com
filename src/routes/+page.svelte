@@ -337,14 +337,13 @@
 				<div>
 					<div class="flex justify-between items-start mb-4">
 						<div>
-							<h3 class="text-2xl font-light">Looking for Work</h3>
+							<h3 class="text-2xl font-light">Freelance Web Developer</h3>
 							<p class="text-gray-500">Remote</p>
 						</div>
 						<span class="text-sm text-gray-500">Present</span>
 					</div>
 					<p class="text-gray-400">
-						I'm currently looking for work as a full-stack or backend web/software developer. Reach
-						out <span><a href="mailto:me@jasperclarke.com" class="linkanimation">here</a></span>.
+						I'm designing and building fast, secure, and visually stunning websites tailored specifically to your needs. Let’s create something amazing—get in touch today! Reach out <span><a href="mailto:me@jasperclarke.com" class="linkanimation">here</a></span>.
 					</p>
 				</div>
 
